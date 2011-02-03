@@ -1,7 +1,0 @@
-!Animal Growth: One animal/two levels doubles in size.
-!Commune with Nature: Learn about terrain for 1 mile/level.
-!Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).
-!Freedom of Movement: Subject moves normally despite impediments.
-!Nondetection M: Hides subject from divination, scrying.
-!Summon Nature’s Ally IV: Calls animal to fight for you.
-!Tree Stride: Step from one tree to another far away.
