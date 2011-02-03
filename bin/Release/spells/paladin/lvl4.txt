@@ -1,0 +1,12 @@
+Break Enchantment: Frees subjects from enchantments, alterations,
+curses, and petrification.
+Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).
+Death Ward: Grants immunity to death spells and negative energy
+effects.
+Dispel Chaos: +4 bonus against attacks by chaotic creatures.
+Dispel Evil: +4 bonus against attacks by evil creatures.
+Holy Sword: Weapon becomes +5, deals +2d6 damage against evil.
+Mark of Justice: Designates action that will trigger curse on subject.
+Neutralize Poison: Immunizes subject against poison, detoxifies
+venom in or on subject.
+Restoration M: Restores level and ability score drains.

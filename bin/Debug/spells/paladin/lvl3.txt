@@ -1,0 +1,13 @@
+Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).
+Daylight: 60-ft. radius of bright light.
+Discern Lies: Reveals deliberate falsehoods.
+Dispel Magic: Cancels spells and magical effects.
+Heal Mount: As heal on warhorse or other special mount.
+Magic Circle against Chaos: As protection from chaos, but 10-ft.
+radius and 10 min./level.
+Magic Circle against Evil: As protection from evil, but 10-ft. radius
+and 10 min./level.
+Magic Weapon, Greater: +1 bonus/four levels (max +5).
+Prayer: Allies +1 bonus on most rolls, enemies –1 penalty.
+Remove Blindness/Deafness: Cures normal or magical conditions.
+Remove Curse: Frees object or person from curse.

@@ -1,0 +1,12 @@
+!Barkskin: Grants +2 (or higher) enhancement to natural armor.
+!Bear’s Endurance: Subject gains +4 to Con for 1 min./level.
+!Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+!Cure Light Wounds: Cures 1d8 damage +1/level (max +5).
+!Hold Animal: Paralyzes one animal for 1 round/level.
+!Owl’s Wisdom: Subject gains +4 to Wis for 1 min./level.
+!Protection from Energy: Absorb 12 points/level of damage fromone kind of energy.
+!Snare: Creates a magic booby trap.
+!Speak with Plants: You can talk to normal plants and plant creatures.
+!Spike Growth: Creatures in area take 1d4 damage, may be slowed.
+!Summon Nature’s Ally II: Calls animal to fight for you.
+!Wind Wall: Deflects arrows, smaller creatures, and gases.

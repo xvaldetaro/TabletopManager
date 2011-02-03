@@ -1,0 +1,18 @@
+!Antilife Shell: 10-ft.-radius field hedges out living creatures.
+!Bear’s Endurance, Mass: As bear’s endurance, affects one subject/level.
+!Bull’s Strength, Mass: As bull’s strength, affects one subject/level.
+!Cat’s Grace, Mass: As cat’s grace, affects one subject/level.
+!Cure Light Wounds, Mass: Cures 1d8 damage +1/level for manycreatures.
+!Dispel Magic, Greater: As dispel magic, but +20 on check.
+!Find the Path: Shows most direct way to a location.
+!Fire Seeds: Acorns and berries become grenades and bombs.
+!Ironwood: Magic wood is strong as steel.
+!Liveoak: Oak becomes treant guardian.
+!Move Earth: Digs trenches and builds hills.
+!Owl’s Wisdom, Mass: As owl’s wisdom, affects one subject/level.
+!Repel Wood: Pushes away wooden objects.
+!Spellstaff: Stores one spell in wooden quarterstaff.
+!Stone Tell: Talk to natural or worked stone.
+!Summon Nature’s Ally VI: Calls creature to fight.
+!Transport via Plants: Move instantly from one plant to another ofthe same kind.
+!Wall of Stone: Creates a stone wall that can be shaped.

@@ -1,0 +1,49 @@
+#Abjuration
+!Dimensional Anchor: Bars extradimensional movement.
+!Fire Trap M: Opened object deals 1d4 damage +1/level.
+!Globe of Invulnerability, Lesser: Stops 1st- through 3rdlevelspell effects.
+!Remove Curse: Frees object or person from curse.
+!Stoneskin M: Ignore 10 points of damage per attack.
+#Conjuration
+!Dimension Door: Teleports you short distance.
+!Evard’s Black Tentacles: Tentacles grapple all within 15 ft. spread.
+!Leomund’s Secure Shelter: Creates sturdy cottage.
+!Minor Creation: Creates one cloth or wood object.
+!Solid Fog: Blocks vision and slows movement.
+!Summon Monster IV: Calls extraplanar creature to fightfor you.
+#Divination
+!Arcane Eye: Invisible floating eye moves 30 ft./round.
+!Detect Scrying: Alerts you of magical eavesdropping.
+!Locate Creature: Indicates direction to familiar creature.
+!Scrying F: Spies on subject from a distance.
+#Enchantment
+!Charm Monster: Makes monster believe it is your ally.
+!Confusion: Subjects behave oddly for 1 round/level.
+!Crushing Despair: Subjects take –2 on attack rolls, damagerolls, saves, and checks.
+!Geas, Lesser: Commands subject of 7 HD or less.
+#Evocation
+!Fire Shield: Creatures attacking you take fire damage;you’re protected from heat or cold.
+!Ice Storm: Hail deals 5d6 damage in cylinder 40 ft. across.
+!Otiluke’s Resilient Sphere: Force globe protects but trapsone subject.
+!Shout: Deafens all within cone and deals 5d6 sonic damage.
+!Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 outto 20 ft. Passing through wall deals 2d6 damage +1/level.
+!Wall of Ice: Ice plane creates wall with 15 hp +1/level, orhemisphere can trap creatures inside.
+#Illusion
+!Hallucinatory Terrain: Makes one type of terrain appearlike another (field into forest, or the like).
+!Illusory Wall: Wall, floor, or ceiling looks real, butanything can pass through.
+!Invisibility, Greater: As invisibility, but subject can attackand stay invisible.
+!Phantasmal Killer: Fearsome illusion kills subject or deals3d6 damage.
+!Rainbow Pattern: Lights fascinate 24 HD of creatures.
+!Shadow Conjuration: Mimics conjuration below 4th level,but only 20% real.
+#Necromancy
+!Animate Dead M: Creates undead skeletons and zombies.
+!Bestow Curse: –6 to an ability score; –4 on attack rolls,saves, and checks; or 50% chance of losing each action.
+!Contagion: Infects subject with chosen disease.
+!Enervation: Subject gains 1d4 negative levels.
+!Fear: Subjects within cone flee for 1 round/level.
+#Transmutation
+!Enlarge Person, Mass: Enlarges several creatures.
+!Polymorph: Gives one willing subject a new form.
+!Rary’s Mnemonic Enhancer F: Wizard only. Prepares extraspells or retains one just cast.
+!Reduce Person, Mass: Reduces several creatures.
+!Stone Shape: Sculpts stone into any shape.

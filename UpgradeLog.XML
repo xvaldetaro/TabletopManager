@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WpfApplication1">
+</Property><Property Name="Solution File" Value="D:\WIZARDS\Resources\WpfApplication1\WpfApplication1.sln">
+</Property><Property Name="User Options File" Value="D:\WIZARDS\Resources\WpfApplication1\WpfApplication1.suo">
+</Property><Property Name="Date" Value="Saturday, January 22, 2011">
+</Property><Property Name="Time" Value="2:00 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WpfApplication1.sln" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\WpfApplication1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="WpfApplication1.suo" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\WpfApplication1.suo">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="WpfApplication1.csproj" Description="Project file successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\WpfApplication1.csproj">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="WpfApplication1.csproj.user" Description="Project user file successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\WpfApplication1.csproj.user">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="App.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\App.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Window1.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Window1.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Ability.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Ability.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Combatant.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Combatant.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="CombatTable.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\CombatTable.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="CompleteSheet.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\CompleteSheet.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="InitiativeSet.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\InitiativeSet.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="NewCombatant.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\NewCombatant.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="NewListboxItem.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\NewListboxItem.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Skill.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Skill.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Spellbook.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Spellbook.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Table.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Table.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="TableViewer.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\TableViewer.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="UndoableCommand.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\UndoableCommand.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Window2.xaml.cs" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Window2.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Properties\Settings.settings" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Properties\Resources.resx" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="App.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\App.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="CompleteSheet.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\CompleteSheet.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="InitiativeSet.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\InitiativeSet.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="NewCombatant.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\NewCombatant.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="NewListboxItem.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\NewListboxItem.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Spellbook.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Spellbook.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Table.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Table.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="TableViewer.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\TableViewer.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Window1.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Window1.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="Window2.xaml" Description="File successfully backed up as D:\WIZARDS\Resources\WpfApplication1\Backup\Window2.xaml">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="WpfApplication1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WpfApplication1" Source="WpfApplication1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WpfApplication1.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WpfApplication1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WpfApplication1" Source="WpfApplication1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

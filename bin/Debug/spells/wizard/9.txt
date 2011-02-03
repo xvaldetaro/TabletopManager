@@ -1,0 +1,33 @@
+#Abjuration
+!Freedom: Releases creature from imprisonment.
+!Imprisonment: Entombs subject beneath the earth.
+!Mordenkainen’s Disjunction: Dispels magic, disenchantsmagic items.
+!Prismatic Sphere: As prismatic wall, but surrounds on allsides.
+#Conjuration
+!Gate X: Connects two planes for travel or summoning.
+!Refuge M: Alters item to transport its possessor to you.
+!Summon Monster IX: Calls extraplanar creature to fightfor you.
+!Teleportation Circle M: Circle teleports any creature insideto designated spot.
+#Divination
+!Foresight: “Sixth sense” warns of impending danger.
+#Enchantment
+!Dominate Monster: As dominate person, but any creature.
+!Hold Monster, Mass: As hold monster, but all within 30 ft.
+!Power Word Kill: Kills one creature with 100 hp or less.
+#Evocation
+!Bigby’s Crushing Hand: Large hand provides cover,pushes, or crushes your foes.
+!Meteor Swarm: Four exploding spheres each deal 6d6 firedamage.
+#Illusion
+!Shades: As shadow conjuration, but up to 8th level and 80%real.
+!Weird: As phantasmal killer, but affects all within 30 ft.
+#Necromancy
+!Astral Projection M: Projects you and companions ontoAstral Plane.
+!Energy Drain: Subject gains 2d4 negative levels.
+!Soul Bind F: Traps newly dead soul to prevent resurrection.
+!Wail of the Banshee: Kills one creature/level.
+#Transmutation
+!Etherealness: Travel to Ethereal Plane with companions.
+!Shapechange F: Transforms you into any creature, andchange forms once per round.
+!Time Stop: You act freely for 1d4+1 rounds.
+#Universal
+!Wish X: As limited wish, but with fewer limits.

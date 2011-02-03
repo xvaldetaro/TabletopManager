@@ -1,0 +1,19 @@
+Cure Light Wounds, Mass: Cures 1d8 damage +1/level for many
+creatures.
+Dispel Magic, Greater: As dispel magic, but +20 on check.
+Dream: Sends message to anyone sleeping.
+False Vision M: Fools scrying with an illusion.
+Heroism, Greater: Gives +4 bonus on attack rolls, saves, skill
+checks; immunity to fear; temporary hp.
+Mind Fog: Subjects in fog get –10 to Wis and Will checks.
+Mirage Arcana: As hallucinatory terrain, plus structures.
+Mislead: Turns you invisible and creates illusory double.
+Nightmare: Sends vision dealing 1d10 damage, fatigue.
+Persistent Image: As major image, but no concentration required.
+Seeming: Changes appearance of one person per two levels.
+Shadow Evocation: Mimics evocation of lower than 5th level, but
+only 20% real.
+Shadow Walk: Step into shadow to travel rapidly.
+Song of Discord: Forces targets to attack each other.
+Suggestion, Mass: As suggestion, plus one subject/level.
+Summon Monster V: Calls extraplanar creature to fight for you.

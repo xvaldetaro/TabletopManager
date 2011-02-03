@@ -1,0 +1,20 @@
+!Analyze Dweomer F: Reveals magical aspects of subject.
+!Animate Objects: Objects attack your foes.
+!Cat’s Grace, Mass: As cat’s grace, affects one subject/level.
+!Charm Monster, Mass: As charm monster, but all within 30 ft.
+!Cure Moderate Wounds, Mass: Cures 2d8 damage +1/level formany creatures.
+!Eagle’s Splendor, Mass: As eagle’s splendor, affects one subject/level.
+!Eyebite: Target becomes panicked, sickened, and comatose.
+!Find the Path: Shows most direct way to a location.
+!Fox’s Cunning, Mass: As fox’s cunning, affects one subject/level.
+!Geas/Quest: As lesser geas, plus it affects any creature.
+!Heroes’ Feast: Food for one creature/level cures and grants combatbonuses.
+!Otto’s Irresistible Dance: Forces subject to dance.
+!Permanent Image: Includes sight, sound, and smell.
+!Programmed Image M: As major image, plus triggered by event.
+!Project Image: Illusory double can talk and cast spells.
+!Scrying, Greater: As scrying, but faster and longer.
+!Shout, Greater: Devastating yell deals 10d6 sonic damage; stunscreatures, damages objects.
+!Summon Monster VI: Calls extraplanar creature to fight for you.
+!Sympathetic Vibration: Deals 2d10 damage/round to freestandingstructure.
+!Veil: Changes appearance of group of creatures.

@@ -1,0 +1,31 @@
+!Animate Dead M: Creates undead skeletons and zombies.
+!Bestow Curse: –6 to an ability score; –4 on attack rolls, saves, andchecks; or 50% chance of losing each action.
+!Blindness/Deafness: Makes subject blinded or deafened.
+!Contagion: Infects subject with chosen disease.
+!Continual Flame M: Makes a permanent, heatless torch.
+!Create Food and Water: Feeds three humans (or one horse)/level.
+!Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).
+!Daylight: 60-ft. radius of bright light.
+!Deeper Darkness: Object sheds supernatural shadow in 60-ft. radius.
+!Dispel Magic: Cancels spells and magical effects.
+!Glyph of Warding M: Inscription harms those who pass it.
+!Helping Hand: Ghostly hand leads subject to you.
+!Inflict Serious Wounds: Touch attack, 3d8 damage +1/level (max+15).
+!Invisibility Purge: Dispels invisibility within 5 ft./level.
+!Locate Object: Senses direction toward object (specific or type).
+!Magic Circle against Chaos/Evil/Good/Law: As protection spells,but 10-ft. radius and 10 min./level.
+!Magic Vestment: Armor or shield gains +1 enhancement per fourlevels.
+!Meld into Stone: You and your gear merge with stone.
+!Obscure Object: Masks object against scrying.
+!Prayer: Allies +1 bonus on most rolls, enemies –1 penalty.
+!Protection from Energy: Absorb 12 points/level of damage fromone kind of energy.
+!Remove Blindness/Deafness: Cures normal or magicalconditions.
+!Remove Curse: Frees object or person from curse.
+!Remove Disease: Cures all diseases affecting subject.
+!Searing Light: Ray deals 1d8/two levels damage, more againstundead.
+!Speak with Dead: Corpse answers one question/two levels.
+!Stone Shape: Sculpts stone into any shape.
+!Summon Monster III: Calls extraplanar creature to fight for you.
+!Water Breathing: Subjects can breathe underwater.
+!Water Walk: Subject treads on water as if solid.
+!Wind Wall: Deflects arrows, smaller creatures, and gases.

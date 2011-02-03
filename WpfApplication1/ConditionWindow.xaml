@@ -1,0 +1,17 @@
+﻿<Window x:Class="inibronx.ConditionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ConditionWindow" Height="216" Width="513" Background="Lavender">
+    <Canvas Background="Lavender">
+        <TextBlock Canvas.Left="67" Canvas.Top="15" FontSize="14" Height="22" Name="textBlock2" Text="'s Conditions:" Width="285" />
+        <ComboBox Canvas.Left="37" Canvas.Top="44" Height="29" Name="comboBox1" Width="143" />
+        <Button Canvas.Left="202" Canvas.Top="43" Height="21" Name="button1" Width="72" Click="button1_Click">Remove</Button>
+        <ComboBox Canvas.Left="108" Canvas.Top="122" Height="25" Name="comboBox2" Width="150" AllowDrop="True" />
+        <TextBox Canvas.Left="27" Canvas.Top="121" Height="22" Name="textBox1" Width="35">0</TextBox>
+        <TextBlock Canvas.Left="73" Canvas.Top="123" Height="24" Name="textBlock1" Width="29" Text="To" FontSize="13" />
+        <Button Canvas.Left="392" Canvas.Top="123" Height="21" Name="button2" Width="72" Click="button2_Click">Add</Button>
+        <TextBox Canvas.Left="294" Canvas.Top="122" Height="22" Name="textBox2" Width="35">0</TextBox>
+        <TextBlock Canvas.Left="268" Canvas.Top="123" FontSize="13" Height="24" Name="textBlock3" Text="For" Width="29" />
+        <TextBlock Canvas.Left="341" Canvas.Top="123" FontSize="13" Height="24" Name="textBlock4" Text="Rounds" Width="45" />
+    </Canvas>
+</Window>

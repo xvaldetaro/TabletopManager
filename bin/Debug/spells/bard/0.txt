@@ -1,0 +1,15 @@
+!Dancing Lights: Creates torches or other lights.
+!Daze: Humanoid creature of 4 HD or less loses nextaction.
+!Detect Magic: Detects spells and magic items within60 ft.
+!Flare: Dazzles one creature (–1 on attack rolls).
+!Ghost Sound: Figment sounds.
+!Know Direction: You discern north.
+!Light: Object shines like a torch.
+!Lullaby: Makes subject drowsy; –5 on Spot and Listen checks,–2 on Will saves against sleep.
+!Mage Hand: 5-pound telekinesis.
+!Mending: Makes minor repairs on an object. Message: Whispered conversation at distance.
+!Open/Close: Opens or closes small or light things.
+!Prestidigitation: Performs minor tricks.
+!Read Magic: Read scrolls and spellbooks.
+!Resistance: Subject gains +1 on saving throws.
+!Summon Instrument: Summons one instrument of the caster’schoice.

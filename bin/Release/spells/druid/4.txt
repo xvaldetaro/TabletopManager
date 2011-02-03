@@ -1,0 +1,17 @@
+!Air Walk: Subject treads on air as if solid (climb at 45-degree angle).
+!Antiplant Shell: Keeps animated plants at bay.
+!Blight: Withers one plant or deals 1d6/level damage to plant creature.
+!Command Plants: Sway the actions of one or more plant creatures.
+!Control Water: Raises or lowers bodies of water.
+!Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).
+!Dispel Magic: Cancels spells and magical effects.
+!Flame Strike: Smite foes with divine fire (1d6/level damage).
+!Freedom of Movement: Subject moves normally despite impediments.
+!Giant Vermin: Turns centipedes, scorpions, or spiders into giantvermin.
+!Ice Storm: Hail deals 5d6 damage in cylinder 40 ft. across.
+!Reincarnate: Brings dead subject back in a random body.
+!Repel Vermin: Insects, spiders, and other vermin stay 10 ft. away.
+!Rusting Grasp: Your touch corrodes iron and alloys.
+!Scrying F: Spies on subject from a distance.
+!Spike Stones: Creatures in area take 1d8 damage, may be slowed.
+!Summon Nature’s Ally IV: Calls creature to fight.

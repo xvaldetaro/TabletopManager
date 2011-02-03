@@ -1,0 +1,26 @@
+Break Enchantment: Frees subjects from enchantments, alterations,
+curses, and petrification.
+Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).
+Detect Scrying: Alerts you of magical eavesdropping.
+Dimension Door: Teleports you short distance.
+Dominate Person: Controls humanoid telepathically.
+Freedom of Movement: Subject moves normally despite impediments.
+Hallucinatory Terrain: Makes one type of terrain appear like
+another (field into forest, or the like).
+Hold Monster: As hold person, but any creature.
+Invisibility, Greater: As invisibility, but subject can attack and stay
+invisible.
+Legend Lore M F: Lets you learn tales about a person, place, or thing.
+Leomund’s Secure Shelter: Creates sturdy cottage.
+Locate Creature: Indicates direction to familiar creature.
+Modify Memory: Changes 5 minutes of subject’s memories.
+Neutralize Poison: Immunizes subject against poison, detoxifies
+venom in or on subject.
+Rainbow Pattern: Lights fascinate 24 HD of creatures.
+Repel Vermin: Insects, spiders, and other vermin stay 10 ft. away.
+Shadow Conjuration: Mimics conjuring below 4th level, but only
+20% real.
+Shout: Deafens all within cone and deals 5d6 sonic damage.
+Speak with Plants: You can talk to normal plants and plant creatures.
+Summon Monster IV: Calls extraplanar creature to fight for you.
+Zone of Silence: Keeps eavesdroppers from overhearing conversations.

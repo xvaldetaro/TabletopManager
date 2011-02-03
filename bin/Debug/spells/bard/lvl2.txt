@@ -1,0 +1,36 @@
+Alter Self: Assume form of a similar creature.
+Animal Messenger: Sends a Tiny animal to a specific place.
+Animal Trance: Fascinates 2d6 HD of animals.
+Blindness/Deafness: Makes subject blind or deaf.
+Blur: Attacks miss subject 20% of the time.
+Calm Emotions: Calms creatures, negating emotion effects.
+Cat’s Grace: Subject gains +4 to Dex for 1 min./level.
+Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).
+Darkness: 20-ft. radius of supernatural shadow.
+Daze Monster: Living creature of 6 HD or less loses next action.
+Delay Poison: Stops poison from harming subject for 1 hour/ level.
+Detect Thoughts: Allows “listening” to surface thoughts.
+Eagle’s Splendor: Subject gains +4 to Cha for 1 min./level.
+Enthrall: Captivates all within 100 ft. + 10 ft./level.
+Fox’s Cunning: Subject gains +4 to Int for 1 min./level.
+Glitterdust: Blinds creatures, outlines invisible creatures.
+Heroism: Gives +2 on attack rolls, saves, skill checks.
+Hold Person: Paralyzes one humanoid for 1 round/level.
+Hypnotic Pattern: Fascinates (2d4 + level) HD of creatures.
+Invisibility: Subject is invisible for 1 min./level or until it attacks.
+Locate Object: Senses direction toward object (specific or type).
+Minor Image: As silent image, plus some sound.
+Mirror Image: Creates decoy duplicates of you (1d4 +1 per three
+levels, max 8).
+Misdirection: Misleads divinations for one creature or object.
+Pyrotechnics: Turns fire into blinding light or choking smoke.
+Rage: Gives +2 to Str and Con, +1 on Will saves, –2 to AC.
+Scare: Panics creatures of less than 6 HD.
+Shatter: Sonic vibration damages objects or crystalline creatures.
+Silence: Negates sound in 15-ft. radius.
+Sound Burst: Deals 1d8 sonic damage to subjects; may stun them.
+Suggestion: Compels subject to follow stated course of action.
+Summon Monster II: Calls extraplanar creature to fight for you.
+Summon Swarm: Summons swarm of bats, rats, or spiders.
+Tongues: Speak any language.
+Whispering Wind: Sends a short message 1 mile/level.

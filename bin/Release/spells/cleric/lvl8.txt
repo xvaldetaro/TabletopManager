@@ -1,0 +1,26 @@
+Antimagic Field: Negates magic within 10 ft.
+Cloak of Chaos F: +4 to AC, +4 resistance, and SR 25 against lawful
+spells.
+Create Greater Undead M: Create shadows, wraiths, spectres, or
+devourers.
+Cure Critical Wounds, Mass: Cures 4d8 damage +1/level for
+many creatures.
+Dimensional Lock: Teleportation and interplanar travel blocked
+for one day/level.
+Discern Location: Reveals exact location of creature or object.
+Earthquake: Intense tremor shakes 5-ft./level radius.
+Fire Storm: Deals 1d6/level fire damage.
+Holy Aura F: +4 to AC, +4 resistance, and SR 25 against evil spells.
+Planar Ally, Greater X: As lesser planar ally, but up to 18 HD.
+Inflict Critical Wounds, Mass: Deals 4d8 damage +1/level to
+many creatures.
+Shield of Law F: +4 to AC, +4 resistance, and SR 25 against chaotic
+spells.
+Spell Immunity, Greater: As spell immunity, but up to 8th-level
+spells.
+Summon Monster VIII: Calls extraplanar creature to fight for you.
+Symbol of Death M: Triggered rune slays nearby creatures.
+Symbol of Insanity M: Triggered rune renders nearby creatures
+insane.
+Unholy Aura F: +4 to AC, +4 resistance, and SR 25 against good
+spells.

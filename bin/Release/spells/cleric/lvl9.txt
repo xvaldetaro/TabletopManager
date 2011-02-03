@@ -1,0 +1,12 @@
+Astral Projection M: Projects you and companions onto Astral
+Plane.
+Energy Drain: Subject gains 2d4 negative levels.
+Etherealness: Travel to Ethereal Plane with companions.
+Gate X: Connects two planes for travel or summoning.
+Heal, Mass: As heal, but with several subjects.
+Implosion: Kills one creature/round.
+Miracle X: Requests a deity’s intercession.
+Soul Bind F: Traps newly dead soul to prevent resurrection.
+Storm of Vengeance: Storm rains acid, lightning, and hail.
+Summon Monster IX: Calls extraplanar creature to fight for you.
+True Resurrection M: As resurrection, plus remains aren’t needed.

@@ -1,0 +1,50 @@
+#Abjuration
+!Dispel Magic: Cancels magical spells and effects.
+!Explosive Runes: Deals 6d6 damage when read.
+!Magic Circle against Chaos/Evil/Good/Law: As protectionspells, but 10-ft. radius and 10 min./level.
+!Nondetection M: Hides subject from divination, scrying.
+!Protection from Energy: Absorb 12 points/level of damagefrom one kind of energy.
+#Conjuration
+!Phantom Steed: Magic horse appears for 1 hour/level.
+!Sepia Snake Sigil M: Creates text symbol that immobilizesreader.
+!Sleet Storm: Hampers vision and movement.
+!Stinking Cloud: Nauseating vapors, 1 round/level.
+!Summon Monster III: Calls extraplanar creature to fightfor you.
+#Divination
+!Arcane Sight: Magical auras become visible to you.
+!Clairaudience/Clairvoyance: Hear or see at a distance for1 min./level.
+!Tongues: Speak any language.
+#Enchantment
+!Deep Slumber: Puts 10 HD of creatures to sleep.
+!Heroism: Gives +2 bonus on attack rolls, saves, skill checks.
+!Hold Person: Paralyzes one humanoid for 1 round/level.
+!Rage: Subjects gains +2 to Str and Con, +1 on Will saves, –2to AC.
+!Suggestion: Compels subject to follow stated course ofaction.
+#Evocation
+!Daylight: 60-ft. radius of bright light.
+!Fireball: 1d6 damage per level, 20-ft. radius.
+!Leomund’s Tiny Hut: Creates shelter for ten creatures.
+!Lightning Bolt: Electricity deals 1d6/level damage.
+!Wind Wall: Deflects arrows, smaller creatures, and gases.
+#Illusion
+!Displacement: Attacks miss subject 50%.
+!Illusory Script M: Only intended reader can decipher.
+!Invisibility Sphere: Makes everyone within 10 ft. invisible.
+!Major Image: As silent image, plus sound, smell and thermaleffects.
+#Necromancy
+!Gentle Repose: Preserves one corpse.
+!Halt Undead: Immobilizes undead for 1 round/level.
+!Ray of Exhaustion: Ray makes subject exhausted.
+!Vampiric Touch: Touch deals 1d6/two levels damage;caster gains damage as hp.
+#Transmutation
+!Blink: You randomly vanish and reappear for 1 round/level.
+!Flame Arrow: Arrows deal +1d6 fire damage.
+!Fly: Subject flies at speed of 60 ft.
+!Gaseous Form: Subject becomes insubstantial and can flyslowly.
+!Haste: One creature/level moves faster, +1 on attack rolls,AC, and Reflex saves.
+!Keen Edge: Doubles normal weapon’s threat range.
+!Magic Weapon, Greater: +1/four levels (max +5).
+!Secret Page: Changes one page to hide its real content.
+!Shrink Item: Object shrinks to one-sixteenth size.
+!Slow: One subject/level takes only one action/round, –2 toAC, –2 on attack rolls.
+!Water Breathing: Subjects can breathe underwater.

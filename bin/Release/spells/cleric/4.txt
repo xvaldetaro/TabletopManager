@@ -1,0 +1,23 @@
+!Air Walk: Subject treads on air as if solid (climb at 45-degree angle).
+!Control Water: Raises or lowers bodies of water.
+!Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).
+!Death Ward: Grants immunity to death spells and negative energyeffects.
+!Dimensional Anchor: Bars extradimensional movement.
+!Discern Lies: Reveals deliberate falsehoods.
+!Dismissal: Forces a creature to return to native plane.
+!Divination M: Provides useful advice for specific proposed actions.
+!Divine Power: You gain attack bonus, +6 to Str, and 1 hp/level.
+!Freedom of Movement: Subject moves normally despite impediments.
+!Giant Vermin: Turns centipedes, scorpions, or spiders into giantvermin.
+!Imbue with Spell Ability: Transfer spells to subject.
+!Inflict Critical Wounds: Touch attack, 4d8 damage +1/level (max+20).
+!Magic Weapon, Greater: +1 bonus/four levels (max +5).
+!Neutralize Poison: Immunizes subject against poison, detoxifiesvenom in or on subject.
+!Planar Ally, Lesser X: Exchange services with a 6 HD extraplanarcreature.
+!Poison: Touch deals 1d10 Con damage, repeats in 1 min.
+!Repel Vermin: Insects, spiders, and other vermin stay 10 ft. away.
+!Restoration M: Restores level and ability score drains.
+!Sending: Delivers short message anywhere, instantly.
+!Spell Immunity: Subject is immune to one spell per four levels.
+!Summon Monster IV: Calls extraplanar creature to fight for you.
+!Tongues: Speak any language.

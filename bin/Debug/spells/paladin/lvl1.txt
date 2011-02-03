@@ -1,0 +1,18 @@
+Bless: Allies gain +1 on attack rolls and +1 on saves against fear.
+Bless Water: Makes holy water.
+Bless Weapon: Weapon strikes true against evil foes.
+Create Water: Creates 2 gallons/level of pure water.
+Cure Light Wounds: Cures 1d8 damage +1/level (max +5).
+Detect Poison: Detects poison in one creature or small object.
+Detect Undead: Reveals undead within 60 ft.
+Divine Favor: You gain +1 per three levels on attack and damage
+rolls.
+Endure Elements: Exist comfortably in hot or cold environments.
+Magic Weapon: Weapon gains +1 bonus.
+Protection from Chaos/Evil: +2 to AC and saves, counter mind
+control, hedge out elementals and outsiders.
+Read Magic: Read scrolls and spellbooks.
+Resistance: Subject gains +1 on saving throws.
+Restoration, Lesser: Dispels magical ability penalty or repairs 1d4
+ability damage.
+Virtue: Subject gains 1 temporary hp.
