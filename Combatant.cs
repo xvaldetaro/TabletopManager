@@ -378,6 +378,10 @@ namespace WpfApplication1
             {
                 return this.skills;
             }
+            set
+            {
+                skills = value;
+            }
         }
         public ObservableCollection<string> Items
         {
@@ -385,12 +389,20 @@ namespace WpfApplication1
             {
                 return this.items;
             }
+            set
+            {
+                items = value;
+            }
         }
         public ObservableCollection<string> Feats
         {
             get
             {
                 return this.feats;
+            }
+            set
+            {
+                feats = value;
             }
         }
         public string Notes
@@ -484,6 +496,12 @@ namespace WpfApplication1
             this.turn = false;
 
         }
+        public Combatant(string name, bool enableComplete)
+        {
+            enableCompleteCharacter();
+            this.cName = name;
+        }
+        
         public Combatant(string savedString)
         {
             enableCompleteCharacter();
@@ -512,6 +530,7 @@ namespace WpfApplication1
             fillFeatsFromString(loadedLine[18]);
             
         }
+        
         #endregion
 
         public object getAttribute(CombatantAttributes attribute)

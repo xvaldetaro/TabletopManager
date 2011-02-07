@@ -31,15 +31,6 @@ namespace WpfApplication1
             listBox1.DataContext = listi;
             execDirectory = Environment.CurrentDirectory;
         }
-        private Combatant getSelectedCombatant()
-        {
-            Combatant combatant = (Combatant)listBox1.SelectedItem;
-            if (combatant == null)
-            {
-                MessageBox.Show("Select a Character", "Invalid Character", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            return combatant;
-        }
         private void Undo(object sender, ExecutedRoutedEventArgs e)
         {
             UndoableCommand.Undo();
@@ -49,13 +40,32 @@ namespace WpfApplication1
         {
             UndoableCommand.Redo();
         }
+        #region CombatTable Edition Methods
+        private Combatant getSelectedCombatant()
+        {
+            Combatant combatant = (Combatant)listBox1.SelectedItem;
+            if (combatant == null)
+            {
+                MessageBox.Show("Select a Character", "Invalid Character", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            return combatant;
+        }
 
         private void AddNewCombatant(object sender, ExecutedRoutedEventArgs e)
         {       
             NewCombatant windowNew = new NewCombatant( listi );
             windowNew.ShowDialog();
         }
+        private void cloneSelectedCombatant_Click(object sender, RoutedEventArgs e)
+        {
+            Combatant selectedCombatant = getSelectedCombatant();
+            if (selectedCombatant == null)
+                return;
 
+            Combatant clone = new Combatant(selectedCombatant.ToString());
+            CommAddCombatant commAdd = new CommAddCombatant(listi, clone);
+            commAdd.Execute();
+        }
         private void RemoveSelectedCombatant(object sender, ExecutedRoutedEventArgs e)
         {
             Combatant toBeRemovedCombatant = getSelectedCombatant();
@@ -99,6 +109,7 @@ namespace WpfApplication1
                 commUpdt.Execute();
             }
         }
+        #endregion
 
         #region quick damage/heal buttons
         private void applyDamage(float damageAmount)
@@ -151,6 +162,7 @@ namespace WpfApplication1
         }
         #endregion
 
+        #region Combat management methods
         private void setInitiativeButton_Click(object sender, RoutedEventArgs e)
         {
             InitiativeSet initWindow = new InitiativeSet(listi);
@@ -327,35 +339,14 @@ namespace WpfApplication1
             CommPreviousCombatant commPrvs = new CommPreviousCombatant(listi);
             commPrvs.Execute();
         }
-      
-        private void SaveAs_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.SaveFileDialog ofd = new Microsoft.Win32.SaveFileDialog();
-            ofd.AddExtension = true;
-            ofd.DefaultExt = "tm1";
-            Nullable<bool> result = ofd.ShowDialog();
-            string temps;
-            if (result == true)
-            {
-                temps = ofd.FileName;
-            }
-            else
-                return;
-
-            this.loadedFile = temps;
-            this.loadedFileDir = Environment.CurrentDirectory;
-            System.IO.StreamWriter SW = System.IO.File.CreateText(temps);
-            foreach (Combatant combatant in listi)
-	        {
-                SW.WriteLine(combatant.ToString());
-            }
-            SW.Close();
-        }
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
             CommClearCombatTable commClr = new CommClearCombatTable(listi);
             commClr.Execute();
         }
+        #endregion
+
+        #region IO methods
         private void Load_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -379,14 +370,8 @@ namespace WpfApplication1
                 this.Title = "TableTop Manager" + temps;
                 System.IO.StreamReader SR;
                 SR = System.IO.File.OpenText(temps);
-                String combatantString = SR.ReadLine();
-                while (combatantString != null)
-                {
-                    Combatant combatant = new Combatant(combatantString);
-                    CommAddCombatant commAdd = new CommAddCombatant(listi, combatant);
-                    commAdd.Execute();
-                    combatantString = SR.ReadLine();
-                }
+                String combatantString = SR.ReadToEnd();
+                JsonExporter.combatTableFromJsonFile(listi, combatantString);
             }
             catch
             {
@@ -409,15 +394,32 @@ namespace WpfApplication1
 
             System.IO.StreamReader SR;
             SR = System.IO.File.OpenText(temps);
-            String combatantString = SR.ReadLine();
-            while (combatantString != null)
-            {
-                Combatant combatant = new Combatant(combatantString);
-                CommAddCombatant commAdd = new CommAddCombatant(listi, combatant);
-                commAdd.Execute();
-                combatantString = SR.ReadLine();
-            }
+            String combatantString = SR.ReadToEnd();
+            JsonExporter.combatTableFromJsonFile(listi, combatantString);
         }
+
+        private void SaveAs_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.SaveFileDialog ofd = new Microsoft.Win32.SaveFileDialog();
+            ofd.AddExtension = true;
+            ofd.DefaultExt = "tm1";
+            Nullable<bool> result = ofd.ShowDialog();
+            string temps;
+            if (result == true)
+            {
+                temps = ofd.FileName;
+            }
+            else
+                return;
+
+            this.loadedFile = temps;
+            this.loadedFileDir = Environment.CurrentDirectory;
+            System.IO.StreamWriter SW = System.IO.File.CreateText(temps);
+
+            SW.WriteLine(JsonExporter.jsonFileFromCombatTable(listi));
+            SW.Close();
+        }
+
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             if (loadedFile == null)
@@ -426,12 +428,57 @@ namespace WpfApplication1
                 return;
             }
             System.IO.StreamWriter SW = System.IO.File.CreateText(this.loadedFile);
-            foreach (Combatant combatant in listi)
-            {
-                SW.WriteLine(combatant.ToString());
-            }
+            SW.WriteLine(JsonExporter.jsonFileFromCombatTable(listi));
             SW.Close();
         }
+
+        private void exportCharacter_Click(object sender, RoutedEventArgs e)
+        {
+            Combatant selectedCombatant = getSelectedCombatant();
+            if (selectedCombatant == null)
+                return;
+
+            Microsoft.Win32.SaveFileDialog ofd = new Microsoft.Win32.SaveFileDialog();
+            ofd.AddExtension = true;
+            ofd.DefaultExt = "tm1";
+            Nullable<bool> result = ofd.ShowDialog();
+            string temps;
+            if (result == true)
+            {
+                temps = ofd.FileName;
+            }
+            else
+                return;
+
+            System.IO.StreamWriter SW = System.IO.File.CreateText(temps);
+
+            SW.WriteLine(JsonExporter.jsonFileFromCombatant(selectedCombatant));
+
+            SW.Close();
+        }
+
+        private void exportAll_Click(object sender, RoutedEventArgs e)
+        {
+            if (loadedFile == null)
+            {
+                MessageBox.Show("invalid file: " + loadedFile);
+                return;
+            }
+            string directoryToExport = this.loadedFileDir + "\\exported\\";
+            System.IO.Directory.CreateDirectory(directoryToExport);
+
+            foreach (Combatant combatant in listi)
+            {
+                string combatantFilePath = directoryToExport + combatant.CName + ".tm1";
+
+                System.IO.StreamWriter SW = System.IO.File.CreateText(combatantFilePath);
+
+                SW.WriteLine(JsonExporter.jsonFileFromCombatant(combatant));
+                SW.Close();
+            }
+        }
+        #endregion
+
         #region Dice Roll Button events
         private void d2_Click(object sender, RoutedEventArgs e)
         {
@@ -475,6 +522,7 @@ namespace WpfApplication1
         }
         #endregion
 
+        #region Gold XP SpellBook and Roll Check
         private void GiveGold_Click(object sender, RoutedEventArgs e)
         {
             List<UndoableCommand> commList = new List<UndoableCommand>();
@@ -608,63 +656,10 @@ namespace WpfApplication1
             Spellbook window = new Spellbook(execDirectory, 0, 9, spellcasterBox.Text);
             window.Show();
         }
+        #endregion
+        
 
-        private void cloneSelectedCombatant_Click(object sender, RoutedEventArgs e)
-        {
-            Combatant selectedCombatant = getSelectedCombatant();
-            if(selectedCombatant==null)
-                return;
-
-            Combatant clone = new Combatant(selectedCombatant.ToString());
-            CommAddCombatant commAdd = new CommAddCombatant(listi, clone);
-            commAdd.Execute();
-        }
-
-        private void exportCharacter_Click(object sender, RoutedEventArgs e)
-        {
-            Combatant selectedCombatant = getSelectedCombatant();
-            if (selectedCombatant == null)
-                return;
-
-            Microsoft.Win32.SaveFileDialog ofd = new Microsoft.Win32.SaveFileDialog();
-            ofd.AddExtension = true;
-            ofd.DefaultExt = "tm1";
-            Nullable<bool> result = ofd.ShowDialog();
-            string temps;
-            if (result == true)
-            {
-                temps = ofd.FileName;
-            }
-            else
-                return;
-
-            System.IO.StreamWriter SW = System.IO.File.CreateText(temps);
-
-            SW.WriteLine(selectedCombatant.ToString());
-
-            SW.Close();
-        }
-
-        private void exportAll_Click(object sender, RoutedEventArgs e)
-        {
-            if (loadedFile == null)
-            {
-                MessageBox.Show("invalid file: " + loadedFile);
-                return;
-            }
-            string directoryToExport = this.loadedFileDir + "\\exported\\";
-            System.IO.Directory.CreateDirectory(directoryToExport);
-
-            foreach (Combatant combatant in listi)
-            {
-                string combatantFilePath = directoryToExport + combatant.CName + ".tm1";
-                
-                System.IO.StreamWriter SW = System.IO.File.CreateText(combatantFilePath);
-                
-                SW.WriteLine(combatant.ToString());
-                SW.Close();
-            }
-        }
+        
     }
     
 
