@@ -26,17 +26,13 @@ namespace WpfApplication1
         float fort;
         float refl;
         float will;
-        float listen;
-        float sense;
-        float spot;
         float xP;
         float gold;
         bool turn;
         bool isNPC;
 
-        bool isComplete = false;
         ObservableCollection<Skill> skills;
-        ObservableCollection<string> items;
+        ObservableCollection<Item> items;
         ObservableCollection<string> feats;
         string notes;
         int[] abilities;
@@ -345,8 +341,8 @@ namespace WpfApplication1
                     return "Brown";
                 }
                 if (turn)
-                    return "LimeGreen";
-                return "Green";
+                    return "LightBlue";
+                return "Blue";
             }
         }
         public string HPColor
@@ -355,9 +351,9 @@ namespace WpfApplication1
             {
                 float hPPercentage = hP/maxHP;
                 if (hPPercentage > 0.6f)
-                    return "Green";
+                    return "White";
                 else if (hPPercentage > 0.3f)
-                    return "Orange";
+                    return "Yellow";
                 else
                     return "Red";
             }
@@ -383,7 +379,7 @@ namespace WpfApplication1
                 skills = value;
             }
         }
-        public ObservableCollection<string> Items
+        public ObservableCollection<Item> Items
         {
             get
             {
@@ -501,36 +497,11 @@ namespace WpfApplication1
             enableCompleteCharacter();
             this.cName = name;
         }
-        
-        public Combatant(string savedString)
+        public Combatant Clone()
         {
-            enableCompleteCharacter();
-            string[] loadedLine = savedString.Split('¨');
-            if (App.getFloatFromString(loadedLine[0]) == 1)
-                IsNPC = false;
-            else
-                IsNPC = true;
-            CName = loadedLine[1];
-            PName = loadedLine[2];
-            HP = App.getFloatFromString(loadedLine[3]);
-            Initiative = App.getFloatFromString(loadedLine[4]);
-            AC = App.getFloatFromString( loadedLine[5]);
-            AB = App.getFloatFromString(loadedLine[6]);
-            MaxHP = App.getFloatFromString(loadedLine[7]);
-            InitMod = App.getFloatFromString(loadedLine[8]);
-            Fort = App.getFloatFromString(loadedLine[9]);
-            Refl = App.getFloatFromString(loadedLine[10]);
-            Will = App.getFloatFromString(loadedLine[11]);
-            XP = App.getFloatFromString(loadedLine[12]);
-            Gold = App.getFloatFromString(loadedLine[13]);
-            notes = loadedLine[14];
-            fillSkillsFromString(loadedLine[15]);
-            fillAbilitiesFromString(loadedLine[16]);
-            fillItemsFromString(loadedLine[17]);
-            fillFeatsFromString(loadedLine[18]);
-            
+            return new Combatant(cName, pName, hP, initiative, aC, aB, maxHP,
+                            initMod, fort, refl, will, skills[(int)eSkills.Listen].SkillRank, skills[(int)eSkills.Sense_Motive].SkillRank, skills[(int)eSkills.Spot].SkillRank, isNPC);
         }
-        
         #endregion
 
         public object getAttribute(CombatantAttributes attribute)
@@ -638,7 +609,6 @@ namespace WpfApplication1
         }
         private void enableCompleteCharacter()
         {
-            isComplete = true;
             abilities = new int[6];
             for (int i = 0; i < 6; i++)
 			{
@@ -649,47 +619,10 @@ namespace WpfApplication1
             {
                 skills.Add(new Skill((eSkills)i, 0));
             }
-            items = new ObservableCollection<string>();
+            items = new ObservableCollection<Item>();
             feats = new ObservableCollection<string>();
         }
-        private void fillSkillsFromString(string skillData)
-        {
-            string[] skillInfoArray = skillData.Split('|');
-            for (int i = 0; i < skillInfoArray.Count(); i++)
-            {
-                skills[i].SkillRank = (int)App.getFloatFromString(skillInfoArray[i]);
-            }
-        }
-        private void fillItemsFromString(string itemsData)
-        {
-            if (itemsData.Length > 1)
-            {
-                string[] itemsDataArray = itemsData.Split('|');
-                for (int i = 0; i < itemsDataArray.Count(); i++)
-                {
-                    items.Add(itemsDataArray[i]);
-                }
-            }
-        }
-        private void fillFeatsFromString(string featsData)
-        {
-            if (featsData.Length > 1)
-            {
-                string[] featsDataArray = featsData.Split('|');
-                for (int i = 0; i < featsDataArray.Count(); i++)
-                {
-                    feats.Add(featsDataArray[i]);
-                }
-            }
-        }
-        private void fillAbilitiesFromString(string abilityData)
-        {
-            string[] abilityDataArray = abilityData.Split('|');
-            for (int i = 0; i < abilityDataArray.Count(); i++)
-            {
-                abilities[i] = (int)App.getFloatFromString(abilityDataArray[i]);
-            }
-        }
+        
         public void setSkillRank(eSkills skill, int rank)
         {
             if (skill == eSkills.Listen || skill == eSkills.Sense_Motive || skill == eSkills.Spot)
@@ -704,45 +637,7 @@ namespace WpfApplication1
         {
             return skills[(int)skill].SkillRank;
         }
-        public override string ToString()
-        {
-            string isNpcWritten;
-            if (isNPC)
-                isNpcWritten = "0";
-            else
-                isNpcWritten = "1";
-            string advString =  isNpcWritten + "¨" + cName + "¨" + pName + "¨" + hP.ToString() + "¨" + initiative.ToString() + "¨" + aC.ToString() + "¨" + aB.ToString() + "¨" + maxHP.ToString()
-                             + "¨" + initMod.ToString() + "¨" + fort.ToString() + "¨" + refl.ToString() + "¨" + will.ToString() + "¨" + ((int)XP).ToString() + "¨" + ((int)Gold).ToString() + "¨" + notes;
-            advString += "¨" + skills[0].SkillRank.ToString();
-            for (int i = 1; i < skills.Count; i++)
-            {
-                advString +=  "|" + skills[i].SkillRank.ToString();
-            }
-            advString += "¨" + abilities[0];
-            for (int i = 1; i < abilities.Count(); i++)
-            {
-                advString += "|" + abilities[i].ToString();
-            }
-            advString += "¨";
-            if (items.Count > 0)
-            {
-                advString += items[0];
-                for (int i = 1; i < items.Count; i++)
-                {
-                    advString += "|" + items[i];
-                }
-            }
-            advString += "¨";
-            if (feats.Count > 0)
-            {
-                advString += feats[0];
-                for (int i = 1; i < feats.Count; i++)
-                {
-                    advString += "|" + feats[i];
-                }
-            }
-            return advString;
-        }
+        
     }
 
     

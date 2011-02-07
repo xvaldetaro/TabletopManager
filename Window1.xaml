@@ -8,7 +8,7 @@
                 <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="charHeader" Text="{Binding Path=CName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="138" />
                 <Separator Height="20" Name="separator2" Width="5" Background="Transparent" />
                 <Separator Height="20" Name="separatorextra2" Width="5" Background="Transparent" />
-                <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="hpHeader" Text="{Binding Path=HP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
+                <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="{Binding Path=HPColor, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Height="20" Name="hpHeader" Text="{Binding Path=HP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
                 <Separator Height="20" Name="separator3" Width="5" Background="Transparent" />
                 <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="fhpHeader" Text="{Binding Path=MaxHP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
                 <Separator Height="20" Name="separatorextra3" Width="5" Background="Transparent" />

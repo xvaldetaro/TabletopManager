@@ -48,7 +48,7 @@ namespace WpfApplication1
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            NewListboxItem itemAdder = new NewListboxItem();
+            newItem itemAdder = new newItem();
             itemAdder.ShowDialog();
             if (itemAdder.gotItem)
             {

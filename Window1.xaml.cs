@@ -62,7 +62,7 @@ namespace WpfApplication1
             if (selectedCombatant == null)
                 return;
 
-            Combatant clone = new Combatant(selectedCombatant.ToString());
+            Combatant clone = selectedCombatant.Clone();
             CommAddCombatant commAdd = new CommAddCombatant(listi, clone);
             commAdd.Execute();
         }
