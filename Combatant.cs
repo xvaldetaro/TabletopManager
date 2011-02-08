@@ -28,6 +28,8 @@ namespace WpfApplication1
         float will;
         float xP;
         float gold;
+        float load;
+        float loadProportion;
         bool turn;
         bool isNPC;
 
@@ -123,6 +125,12 @@ namespace WpfApplication1
             if (SpotChanged != null)
                 SpotChanged(this, EventArgs.Empty);
         }
+        public event EventHandler LoadChanged;
+        private void OnLoadChanged()
+        {
+            if (LoadChanged != null)
+                LoadChanged(this, EventArgs.Empty);
+        }
         public event EventHandler isNPCChanged;
         private void OnIsNPCChanged()
         {
@@ -140,6 +148,18 @@ namespace WpfApplication1
         {
             if (HPColorChanged != null)
                 HPColorChanged(this, EventArgs.Empty);
+        }
+        public event EventHandler FormattedHPChanged;
+        private void OnFormattedHPChanged()
+        {
+            if (FormattedHPChanged != null)
+                FormattedHPChanged(this, EventArgs.Empty);
+        }
+        public event EventHandler LoadColorChanged;
+        private void OnLoadColorChanged()
+        {
+            if (LoadColorChanged != null)
+                LoadColorChanged(this, EventArgs.Empty);
         }
         public event EventHandler XPChanged;
         private void OnXPChanged()
@@ -186,6 +206,10 @@ namespace WpfApplication1
                 OnPNameChanged();
             }
         }
+        public string FormattedHP
+        {
+            get { return hP.ToString() + "/" + maxHP.ToString() ; }
+        }
         public float HP
         {
             get { return hP; }
@@ -194,6 +218,7 @@ namespace WpfApplication1
                 hP = value;
                 OnHPChanged();
                 OnHPColorChanged();
+                OnFormattedHPChanged();
             }
         }
         public float Initiative
@@ -230,6 +255,7 @@ namespace WpfApplication1
             {
                 maxHP = value;
                 OnMaxHPChanged();
+                OnFormattedHPChanged();
             }
         }
         public float InitMod
@@ -302,6 +328,21 @@ namespace WpfApplication1
                 OnInnerColorChanged();
             }
         }
+        public string Load
+        {
+            get 
+            { 
+                float x = abilities[0];
+                float maxLoad = (0.00105364251f * x * x * x * x) - (0.02295160962f * x * x * x) + (0.262456409f * x * x) + (1.989551162f * x) + 1.461694726f;
+                loadProportion = load / maxLoad;
+                if (loadProportion < 1)
+                    return "Light";
+                else if (loadProportion >= 1 && loadProportion < 2)
+                    return "Medium";
+                else
+                    return "Heavy";
+            }
+        }
         public float XP
         {
             get { return xP; }
@@ -353,6 +394,18 @@ namespace WpfApplication1
                 if (hPPercentage > 0.6f)
                     return "White";
                 else if (hPPercentage > 0.3f)
+                    return "Yellow";
+                else
+                    return "Red";
+            }
+        }
+        public string LoadColor
+        {
+            get
+            {
+                if (loadProportion < 1.0f)
+                    return "White";
+                else if (loadProportion >= 1.0f && loadProportion < 2.0f)
                     return "Yellow";
                 else
                     return "Red";
@@ -415,7 +468,11 @@ namespace WpfApplication1
         public int AbilitySTR
         {
             get { return abilities[0]; }
-            set { abilities[0] = value; }
+            set { 
+                abilities[0] = value;
+                OnLoadChanged();
+                OnLoadColorChanged();
+            }
         }
         public int AbilityDEX
         {
@@ -444,7 +501,24 @@ namespace WpfApplication1
         }
         #endregion
 
-        #region constructors
+        #region constructors and init
+        private void enableCompleteCharacter()
+        {
+            load = 0;
+            loadProportion = 0;
+            abilities = new int[6];
+            for (int i = 0; i < 6; i++)
+            {
+                abilities[i] = 10;
+            }
+            skills = new ObservableCollection<Skill>();
+            for (int i = 0; i <= (int)eSkills.Use_Rope; i++)
+            {
+                skills.Add(new Skill((eSkills)i, 0));
+            }
+            items = new ObservableCollection<Item>();
+            feats = new ObservableCollection<string>();
+        }
         public Combatant(string cName, string pName, float hp, float initiative, float aC, float aB, float maxHP,
                             float initMod, float fort, float refl, float will, float listen, float sense, float spot, bool isNPC)
         {
@@ -504,6 +578,7 @@ namespace WpfApplication1
         }
         #endregion
 
+        #region Collections Getters and Setters
         public object getAttribute(CombatantAttributes attribute)
         {
             switch (attribute)
@@ -511,29 +586,29 @@ namespace WpfApplication1
                 case CombatantAttributes.cName:
                     return CName;
                 case CombatantAttributes.pName:
-                    return PName;               
+                    return PName;
                 case CombatantAttributes.hp:
-                    return HP;                   
+                    return HP;
                 case CombatantAttributes.initiative:
-                    return Initiative;                   
+                    return Initiative;
                 case CombatantAttributes.aC:
-                    return AC;                   
+                    return AC;
                 case CombatantAttributes.aB:
-                    return AB;                   
+                    return AB;
                 case CombatantAttributes.maxHP:
-                    return MaxHP;                   
+                    return MaxHP;
                 case CombatantAttributes.initMod:
-                    return InitMod;                   
+                    return InitMod;
                 case CombatantAttributes.fort:
-                    return Fort;                   
+                    return Fort;
                 case CombatantAttributes.refl:
-                    return Refl;                    
+                    return Refl;
                 case CombatantAttributes.will:
-                    return Will;                   
+                    return Will;
                 case CombatantAttributes.listen:
-                    return getSkillRank(eSkills.Listen);                    
+                    return getSkillRank(eSkills.Listen);
                 case CombatantAttributes.sense:
-                    return getSkillRank(eSkills.Sense_Motive);                   
+                    return getSkillRank(eSkills.Sense_Motive);
                 case CombatantAttributes.spot:
                     return getSkillRank(eSkills.Spot);
                 case CombatantAttributes.isNPC:
@@ -542,10 +617,10 @@ namespace WpfApplication1
                     return Gold;
                 case CombatantAttributes.xp:
                     return XP;
-                    
+
                 default:
                     return null;
-                    
+
             }
         }
         public void setAttribute(CombatantAttributes attribute, object value)
@@ -586,7 +661,7 @@ namespace WpfApplication1
                     Will = (float)value;
                     break;
                 case CombatantAttributes.listen:
-                    setSkillRank(eSkills.Listen,(int)value);
+                    setSkillRank(eSkills.Listen, (int)value);
                     break;
                 case CombatantAttributes.sense:
                     setSkillRank(eSkills.Sense_Motive, (int)value);
@@ -607,22 +682,6 @@ namespace WpfApplication1
                     break;
             }
         }
-        private void enableCompleteCharacter()
-        {
-            abilities = new int[6];
-            for (int i = 0; i < 6; i++)
-			{
-                abilities[i] = 10;
-            }
-            skills = new ObservableCollection<Skill>();
-            for (int i = 0; i <= (int)eSkills.Use_Rope; i++)
-            {
-                skills.Add(new Skill((eSkills)i, 0));
-            }
-            items = new ObservableCollection<Item>();
-            feats = new ObservableCollection<string>();
-        }
-        
         public void setSkillRank(eSkills skill, int rank)
         {
             if (skill == eSkills.Listen || skill == eSkills.Sense_Motive || skill == eSkills.Spot)
@@ -637,7 +696,25 @@ namespace WpfApplication1
         {
             return skills[(int)skill].SkillRank;
         }
-        
+        public void addItem(Item item)
+        {
+            items.Add(item);
+            load += item.WeightPounds;
+            OnLoadChanged();
+            OnLoadColorChanged();
+        }
+        public void removeItem(Item item)
+        {
+            items.Remove(item);
+            load -= item.WeightPounds;
+            OnLoadChanged();
+            OnLoadColorChanged();
+        }
+        public void removeItem(int index)
+        {
+            removeItem(items[index]);
+        }
+        #endregion
     }
 
     

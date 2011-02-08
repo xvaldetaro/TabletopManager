@@ -10,7 +10,7 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="itemBoxTemplate">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" MouseRightButtonDown="StackPanel_MouseRightButtonDown">
                 <TextBlock Height="20" Name="charHeader" Text="{Binding Path=Name}" TextAlignment="Left" Width="138" />
                 <Separator Height="20" Name="separator2" Width="5" Background="Transparent" />
                 <Separator Height="20" Name="separatorextra2" Width="5" Background="Transparent" />
@@ -59,7 +59,7 @@
         <TextBlock Background="Black" Canvas.Left="157" Canvas.Top="184" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock6" Text="GOLD PIECES" TextAlignment="Center" Width="166" />
         <TextBox Canvas.Left="329" Canvas.Top="184" Height="24" Name="textBox2" Text="{Binding Path=Gold}" Width="76" TextAlignment="Center" />
         <TextBlock Background="Black" Canvas.Left="644" Canvas.Top="58" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock7" Text="FEATS" TextAlignment="Center" Width="191" />
-        <TextBlock Background="Black" Canvas.Left="644" Canvas.Top="330" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock8" Text="ITEMS" TextAlignment="Center" Width="246" />
+        <TextBlock Background="Black" Canvas.Left="644" Canvas.Top="330" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock8" Text="ITEMS" TextAlignment="Center" Width="149" />
         <ListBox IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Canvas.Left="644" Canvas.Top="89" Height="207" Name="listBox1" Width="192" />
         <ListBox ItemTemplate="{StaticResource itemBoxTemplate}" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Items}" Canvas.Left="644" Canvas.Top="360" Height="239" Name="listBox2" Width="246" />
         <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="644" Canvas.Top="301" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" Click="button2_Click">NEW</Button>
@@ -70,5 +70,7 @@
         <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="644" Canvas.Top="605" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button3" Padding="0" VerticalContentAlignment="Center" Width="87" Click="button3_Click">NEW</Button>
         <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="748" Canvas.Top="605" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button4" Padding="0" VerticalContentAlignment="Center" Width="87" Click="button4_Click">REMOVE</Button>
         <Button Canvas.Left="740" Canvas.Top="7" Height="28" Name="button5" Width="95" Click="button5_Click">Ok</Button>
+        <TextBlock Background="Black" Canvas.Left="799" Canvas.Top="330" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock10" Text="W" TextAlignment="Center" Width="29" />
+        <TextBlock Background="Black" Canvas.Left="834" Canvas.Top="330" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock11" Text="Gold" TextAlignment="Center" Width="56" />
     </Canvas>
 </Window>

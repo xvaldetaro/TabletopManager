@@ -53,7 +53,7 @@ namespace WpfApplication1
             if (itemAdder.gotItem)
             {
                 Combatant combatant = (Combatant)grid1.DataContext;
-                combatant.Items.Add(itemAdder.item);
+                combatant.addItem(itemAdder.Item);
             }
         }
 
@@ -63,7 +63,7 @@ namespace WpfApplication1
             if (listBox2.SelectedIndex == -1)
                 MessageBox.Show("No selected item");
             else
-                combatant.Items.RemoveAt(listBox2.SelectedIndex);
+                combatant.removeItem(listBox2.SelectedIndex);
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
@@ -71,6 +71,14 @@ namespace WpfApplication1
             Combatant combatant = (Combatant)grid1.DataContext;
             combatant.setSkillRank(eSkills.Listen, combatant.getSkillRank(eSkills.Listen));
             Close();
+        }
+
+        private void StackPanel_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            newItem itemAdder = new newItem();
+            Combatant combatant = (Combatant)grid1.DataContext;
+            itemAdder.Item = combatant.Items[listBox2.SelectedIndex];
+            itemAdder.ShowDialog();
         }
     }
 }
