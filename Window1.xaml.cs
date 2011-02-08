@@ -580,31 +580,31 @@ namespace WpfApplication1
                 commPack.Execute();
             }
         }
-
-        private void rollAll_Click(object sender, RoutedEventArgs e)
+        private void rollCheck_Click(object sender, RoutedEventArgs e)
         {
             Random randomizer = new Random();
 
+            string menuItemHeader = (string)((MenuItem)sender).Header;
             string msg = "Results:\n";
             foreach (Combatant combatant in listi)
             {
-                if (comboBox1.Text == "Fort")
+                if (menuItemHeader == "Fortitude")
                 {
                     msg = msg + combatant.CName + " = " + System.Convert.ToString(combatant.Fort + randomizer.Next(1, 21)) + "\n";
                 }
-                else if (comboBox1.Text == "Reflex")
+                else if (menuItemHeader == "Reflex")
                 {
                     msg = msg + combatant.CName + " = " + System.Convert.ToString(combatant.Refl + randomizer.Next(1, 21)) + "\n";
                 }
-                else if (comboBox1.Text == "Will")
+                else if (menuItemHeader == "Will")
                 {
                     msg = msg + combatant.CName + " = " + System.Convert.ToString(combatant.Will + randomizer.Next(1, 21)) + "\n";
                 }
-                else if (comboBox1.Text == "Spot")
+                else if (menuItemHeader == "Spot")
                 {
                     msg = msg + combatant.CName + " = " + System.Convert.ToString(combatant.Spot + randomizer.Next(1, 21)) + "\n";
                 }
-                else if (comboBox1.Text == "Sense Motive")
+                else if (menuItemHeader == "Sense Motive")
                 {
                     msg = msg + combatant.CName + " = " + System.Convert.ToString(combatant.Sense + randomizer.Next(1, 21)) + "\n";
                 }
@@ -657,9 +657,39 @@ namespace WpfApplication1
             window.Show();
         }
         #endregion
-        
 
-        
+        private void StackPanel_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            newItem itemAdder = new newItem();
+            Combatant combatant = (Combatant)quickSheet.DataContext;
+            itemAdder.Item = combatant.Items[itemListBox.SelectedIndex];
+            itemAdder.ShowDialog();
+        }
+
+        private void newItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            newItem itemAdder = new newItem();
+            itemAdder.ShowDialog();
+            if (itemAdder.gotItem)
+            {
+                Combatant combatant = (Combatant)quickSheet.DataContext;
+                combatant.addItem(itemAdder.Item);
+            }
+        }
+
+        private void removeItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            Combatant combatant = (Combatant)quickSheet.DataContext;
+            if (itemListBox.SelectedIndex == -1)
+                MessageBox.Show("No selected item");
+            else
+                combatant.removeItem(itemListBox.SelectedIndex);
+        }
+
+        private void combatantRow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            quickSheet.DataContext = getSelectedCombatant();
+        }
     }
     
 
