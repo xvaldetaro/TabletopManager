@@ -18,9 +18,18 @@ namespace WpfApplication1
     /// </summary>
     public partial class Window2 : Window
     {
-        public Window2()
+        public string InputValue { get { return inputValue; } }
+        string inputValue;
+        public Window2( string title )
         {
             InitializeComponent();
+            this.Title = title;
+            inputValueTextBox.Focus();
+        }
+        private void saveInputValue(object sender, ExecutedRoutedEventArgs e)
+        {
+            inputValue = this.inputValueTextBox.Text;
+            this.Close();
         }
     }
 }

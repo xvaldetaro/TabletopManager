@@ -534,7 +534,9 @@ namespace WpfApplication1
                     numPCs++;
                 }
             }
-            float goldShare = App.getFloatFromString(giveBox.Text) / (float)numPCs;
+            Window2 inputGetter = new Window2("How much gold will be Awarded?");
+            inputGetter.ShowDialog();
+            float goldShare = App.getFloatFromString(inputGetter.InputValue) / (float)numPCs;
             for (int i = 0; i < listi.Count; i++)
             {
                 if (!listi[i].IsNPC)
@@ -563,7 +565,9 @@ namespace WpfApplication1
                     numPCs++;
                 }
             }
-            float xpShare = App.getFloatFromString(giveBox.Text) / (float)numPCs;
+            Window2 inputGetter = new Window2("How much xp will be Awarded?");
+            inputGetter.Show();
+            float xpShare = App.getFloatFromString(inputGetter.InputValue) / (float)numPCs;
             for (int i = 0; i < listi.Count; i++)
             {
                 if (!listi[i].IsNPC)
@@ -653,7 +657,7 @@ namespace WpfApplication1
 
         private void randomSpellbook_Click(object sender, RoutedEventArgs e)
         {
-            Spellbook window = new Spellbook(execDirectory, 0, 9, spellcasterBox.Text);
+            Spellbook window = new Spellbook(execDirectory, 0, 9, (string)((MenuItem)sender).Header);
             window.Show();
         }
         #endregion

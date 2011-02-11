@@ -1,38 +1,14 @@
 ﻿<Window x:Class="WpfApplication1.Window2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="Window2" Height="210" Width="669">
-    <StackPanel Orientation="Horizontal">
-        <TextBlock Background="LimeGreen" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="charHeader" Text="Sabotas" TextAlignment="Center" Width="138" />
-        <Separator Height="20" Name="separator2" Width="5" Background="Transparent" />
-        <Separator Height="20" Name="separatorextra2" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="hpHeader" Text="{Binding Path=HP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
-        <Separator Height="20" Name="separator3" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="fhpHeader" Text="{Binding Path=MaxHP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
-        <Separator Height="20" Name="separatorextra3" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="iniHeader" Text="{Binding Path=Initiative, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
-        <Separator Height="20" Name="separator4" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock6" Text="{Binding Path=AC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
-        <Separator Height="20" Name="separator6" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock7" Text="{Binding Path=AB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="28" />
-        <Separator Height="20" Name="separator7" Width="5" Background="Transparent" />
-        <Separator Height="20" Name="separator9" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock8" Text="{Binding Path=Fort, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="30" />
-        <Separator Height="20" Name="separator10" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock9" Text="{Binding Path=Refl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="30" />
-        <Separator Height="20" Name="separator11" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock10" Text="{Binding Path=Will, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="30" />
-        <Separator Height="20" Name="separator12" Width="5" Background="Transparent" />
-        <Separator Height="20" Name="separator13" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock11" Text="{Binding Path=Listen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="36" />
-        <Separator Height="20" Name="separator15" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock12" Text="{Binding Path=Sense, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="36" />
-        <Separator Height="20" Name="separator16" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock13" Text="{Binding Path=Spot, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="36" />
-        <Separator Height="20" Name="separator1" Width="5" Background="Transparent" />
-        <Separator Height="20" Name="separatorextra1" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock14" Text="{Binding Path=Gold, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="45" />
-        <Separator Height="20" Name="separator5" Width="5" Background="Transparent" />
-        <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock15" Text="{Binding Path=XP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="45" />
-    </StackPanel>
+    Title="Input" Height="83" Width="305">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="saveInputValue" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="New"/>
+    </Window.InputBindings>
+    <Canvas>
+        <TextBox Height="29" Name="inputValueTextBox" Width="274" Canvas.Left="3" Canvas.Top="8" />
+    </Canvas>
 </Window>
