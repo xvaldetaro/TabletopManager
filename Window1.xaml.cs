@@ -690,6 +690,13 @@ namespace WpfApplication1
         {
             quickSheet.DataContext = getSelectedCombatant();
         }
+        private void openTable_Click(object sender, RoutedEventArgs e)
+        {
+            string tableFileTag = (string)((MenuItem)sender).Tag + ".jpg";
+            TableViewer window = new TableViewer();
+            if(window.SetImage(execDirectory, tableFileTag))
+                window.Show();
+        }
     }
     
 

@@ -73,8 +73,8 @@
         </GroupBox>
         <Border Canvas.Left="6" Canvas.Top="44" Height="502" Name="border1" Width="699" BorderBrush="Black" BorderThickness="3" />
         <ListBox Name="listBox1" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" ItemTemplate="{StaticResource listBoxTemplate}" IsSynchronizedWithCurrentItem="True" Height="470" Width="693" Canvas.Left="9" Canvas.Top="72" BorderThickness="0" />
-        <Button Height="26" Name="undo" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="68" Command="Undo" Canvas.Left="1070" Canvas.Top="804" FontSize="18" FontFamily="Fixedsys" FontWeight="Bold" Foreground="Black">UNDO</Button>
-        <Button Canvas.Left="991" Canvas.Top="804" Height="25" Name="redo" Width="73" Command="Redo" FontSize="18" FontFamily="Fixedsys" FontWeight="Bold" FlowDirection="LeftToRight" Foreground="Black">REDO</Button>
+        <Button Height="26" Name="undo" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="68" Command="Undo" Canvas.Left="511" Canvas.Top="804" FontSize="18" FontFamily="Fixedsys" FontWeight="Bold" Foreground="Black">UNDO</Button>
+        <Button Canvas.Left="438" Canvas.Top="804" Height="25" Name="redo" Width="73" Command="Redo" FontSize="18" FontFamily="Fixedsys" FontWeight="Bold" FlowDirection="LeftToRight" Foreground="Black">REDO</Button>
         <StackPanel Canvas.Left="12" Canvas.Top="45" Height="21" Name="stackPanel1" Width="693" Orientation="Horizontal">
             <TextBlock Background="Black" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="charHeader" Text="CHARACTER" TextAlignment="Center" Width="138" />
             <Separator Height="20" Name="separator2" Width="5" Foreground="Transparent" Background="Transparent" />
@@ -118,7 +118,7 @@
                 <Button Canvas.Left="83" Canvas.Top="107" Height="24" Name="GiveXP" Width="73" Click="GiveXP_Click">Give XP</Button>
             </Canvas>
         </GroupBox>
-        <GroupBox Canvas.Left="794" Canvas.Top="528" Header="Dice Rollers" Height="133.32" Name="groupBox3" Width="295.526">
+        <GroupBox Canvas.Left="375" Canvas.Top="559" Header="Dice Rollers" Height="133.32" Name="groupBox3" Width="295.526">
             <Canvas>
                 <Button Canvas.Left="13.332" Canvas.Top="6" Height="31" Name="d2" Width="59.994" Click="d2_Click">d2</Button>
                 <Button Canvas.Left="78.881" Canvas.Top="6" Height="31" Name="d6" Width="59.994" Click="d6_Click">d6</Button>
@@ -133,57 +133,7 @@
                          " Name="resultBox" Width="54.439">0</TextBox>
             </Canvas>
         </GroupBox>
-        <GroupBox Canvas.Left="370" Canvas.Top="558" Header="Multiple Rolls" Height="194" Name="groupBox4" Width="213">
-            <Canvas>
-                <Button Canvas.Left="15" Canvas.Top="36.02" Height="24" Name="restoreAllHP" Width="147" Click="restoreAllHP_Click">Restore All HP</Button>
-                <Button Canvas.Left="15" Canvas.Top="66.02" Height="24" Name="restoreNPCHP" Width="147" Click="restoreNPCHP_Click">Restore NPC HP</Button>
-                <Button Height="24" Name="rollNPCInit" Click="rollNPCInit_Click" Canvas.Left="15" Canvas.Top="6" Width="147">Roll NPC Init</Button>
-                <ComboBox Canvas.Left="64" Canvas.Top="127" Height="24" Name="comboBox1" Width="126">
-                    <ComboBoxItem>Fort</ComboBoxItem>
-                    <ComboBoxItem>Reflex</ComboBoxItem>
-                    <ComboBoxItem>Will</ComboBoxItem>
-                    <ComboBoxItem>Listen</ComboBoxItem>
-                    <ComboBoxItem>Spot</ComboBoxItem>
-                    <ComboBoxItem>Sense Motive</ComboBoxItem>
-                </ComboBox>
-                <Button Canvas.Left="15" Canvas.Top="96" Height="25" Name="rollAll" Width="175">
-                    <Button.ContextMenu>
-                        <ContextMenu Name="contex">
-                            <MenuItem Header="Reports" Name="menuItemReports" />
-                            <MenuItem Header="Contracts" Name="menuItemContracts" />
-                            <MenuItem Header="Customers" Name="menuItemCustomers" />
-                            <MenuItem Header="Documentation Creation Instructions" Name="menuItemDocumentation" />
-                            <MenuItem Header="E-Mail" Name="menuItemEmail" />
-                        </ContextMenu>
-                    </Button.ContextMenu> Roll Check for All
-                </Button>
-                <TextBlock Canvas.Left="15" Canvas.Top="127" FontSize="14" Foreground="Black" Height="20" Name="textBlock5" Text="Check:" Width="43" />
-            </Canvas>
-        </GroupBox>
-        <GroupBox Canvas.Left="584" Canvas.Top="547" Header="Changes on Selected Character" Height="291" Name="groupBox6" Width="207.757">
-            <Canvas>
-                <Button Canvas.Left="14.443" Canvas.Top="154" Height="24" Name="damageHeal" Width="55.55" Click="damageHeal_Click">Damage</Button>
-                <TextBlock Canvas.Left="46.662" Canvas.Top="184" Height="20" Name="textBlock1" Width="53.328" Text="Amount:" />
-                <TextBox Canvas.Left="96.657" Canvas.Top="182" Height="23" Name="damageHealBox" Width="58.883" />
-                <Button Canvas.Left="28.886" Canvas.Top="88" Height="25" Name="plus1Dmg" Width="32.219" Click="plus1Dmg_Click">+1</Button>
-                <Button Canvas.Left="64.438" Canvas.Top="88" Height="25" Name="plus3Dmg" Width="32.219" Click="plus3Dmg_Click">+3</Button>
-                <Button Canvas.Left="98.879" Canvas.Top="88" Height="25" Name="plus5Dmg" Width="32.219" Click="plus5Dmg_Click">+5</Button>
-                <Button Canvas.Left="134.431" Canvas.Top="88" Height="25" Name="plus10Dmg" Width="32.219" Click="plus10Dmg_Click">+10</Button>
-                <Button Canvas.Left="28.886" Canvas.Top="119" Height="25" Name="minus1Dmg" Width="32.219" Click="minus1Dmg_Click">-1</Button>
-                <Button Canvas.Left="64.438" Canvas.Top="119" Height="25" Name="minus2Dmg" Width="32.219" Click="minus2Dmg_Click">-3</Button>
-                <Button Canvas.Left="98.879" Canvas.Top="119" Height="25" Name="minus5Dmg" Width="32.219" Click="minus5Dmg_Click">-5</Button>
-                <Button Canvas.Left="134.431" Canvas.Top="119" Height="25" Name="minus10Dmg" Width="32.219" Click="minus10Dmg_Click">-10</Button>
-                <TextBlock Canvas.Left="26.664" Canvas.Top="70" Height="21" Text="Quick Change Selected Hp" Name="textBlock2" Width="147.763" />
-                <Button Canvas.Left="11.11" Canvas.Top="37" Height="24" Name="restoreSelectedHp" Width="175.538" Click="restoreSelectedHp_Click">Restore Selected HP</Button>
-                <Button Canvas.Left="11.11" Canvas.Top="212" Height="24" Name="button1" Width="175.538" Click="button1_Click">Set Selected Initiative</Button>
-                <TextBlock Canvas.Left="13.332" Canvas.Top="242" Height="20" Name="textBlock3" Text="Initiative:" Width="53.328" />
-                <TextBox Canvas.Left="63.327" Canvas.Top="240" Height="23" Name="initiativeBox" Width="32.219" />
-                <Button Canvas.Left="75.548" Canvas.Top="154" Height="24" Name="Gold" Width="55.55" Click="Gold_Click">Gold</Button>
-                <Button Canvas.Left="135.542" Canvas.Top="154" Height="24" Name="XP" Width="55.55" Click="XP_Click">XP</Button>
-                <Button Canvas.Left="11.11" Canvas.Top="7" Height="24" Name="editCombatant" Width="175.538" Click="editCombatant_Click">Edit Selected Combatant</Button>
-            </Canvas>
-        </GroupBox>
-        <GroupBox Canvas.Left="795" Canvas.Top="663" Header="Changes on Combat Table" Height="166" Name="groupBox7" Width="186">
+        <GroupBox Canvas.Left="762" Canvas.Top="701" Header="Changes on Combat Table" Height="166" Name="groupBox7" Width="186">
             <Canvas>
                 <Button Canvas.Left="9.999" Canvas.Top="10.04" Command="New" Height="24" Name="addNewCombatant" Width="156">Add New Combatant</Button>
                 <Button Canvas.Left="9.999" Canvas.Top="39.04" Command="Delete" Height="24.04" Name="removeSelectedCombatant" Width="156" Content="Remove Selected"></Button>
@@ -192,17 +142,7 @@
                 <Button Canvas.Left="9.999" Canvas.Top="69" Height="24" Name="cloneSelectedCombatant" Width="157" Click="cloneSelectedCombatant_Click" Content="Clone Selected"></Button>
             </Canvas>
         </GroupBox>
-        <GroupBox Canvas.Left="12.252" Canvas.Top="751" Header="Input-Output" Height="78.85" Name="groupBox8" Width="571.054">
-            <Canvas>
-                <Button Canvas.Left="5" Canvas.Top="15" Height="23" Name="SaveAs" Width="91" Click="SaveAs_Click">Save As</Button>
-                <Button Canvas.Left="266" Canvas.Top="15" Height="23" Name="Load" Width="82" Click="Load_Click">Load</Button>
-                <Button Canvas.Left="101" Canvas.Top="15" Height="23" Name="Save" Width="78" Click="Save_Click">Save</Button>
-                <Button Canvas.Left="185" Canvas.Top="15" Height="23" Name="Include" Width="75" Click="Include_Click">Include</Button>
-                <Button Canvas.Left="354" Canvas.Top="15" Height="23" Name="exportCharacter" Width="95" Click="exportCharacter_Click">Export Selected</Button>
-                <Button Canvas.Left="454" Canvas.Top="15" Content="Export ALL" Height="23" Name="button3" Width="95" Click="exportAll_Click" />
-            </Canvas>
-        </GroupBox>
-        <Canvas Canvas.Left="713" Canvas.Top="46" Height="476" Name="quickSheet" Width="425">
+        <Canvas Canvas.Left="713" Canvas.Top="46" Height="500" Name="quickSheet" Width="425">
             <TextBlock Canvas.Left="11" Canvas.Top="35" FontFamily="Cambria" FontWeight="Bold" Height="20" Name="textBlock16" Text="CHARACTER NAME" Width="104" />
             <TextBox Canvas.Left="10" Canvas.Top="10" FontSize="14" Height="24" HorizontalContentAlignment="Center" Name="textBox1" Text="{Binding Path=CName}" TextAlignment="Left" Width="281" />
             <TextBlock Background="Black" Canvas.Left="17" Canvas.Top="61" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock34" Text="HP" TextAlignment="Center" Width="56" />
@@ -235,8 +175,31 @@
             <TextBlock Background="Black" Canvas.Left="321" Canvas.Top="64" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock24" Text="W" TextAlignment="Center" Width="29" />
             <TextBlock Background="Black" Canvas.Left="356" Canvas.Top="64" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock25" Text="Gold" TextAlignment="Center" Width="56" />
             <CheckBox Canvas.Left="321" Canvas.Top="10" Content="NPC" Height="22" IsChecked="{Binding Path=IsNPC}" Name="isNPC" Width="74" />
+            <GroupBox Canvas.Left="224" Canvas.Top="465" Header="Changes on Selected Character" Height="291" Name="groupBox6" Width="207.757">
+                <Canvas>
+                    <Button Canvas.Left="14.443" Canvas.Top="154" Height="24" Name="damageHeal" Width="55.55" Click="damageHeal_Click">Damage</Button>
+                    <TextBlock Canvas.Left="46.662" Canvas.Top="184" Height="20" Name="textBlock1" Width="53.328" Text="Amount:" />
+                    <TextBox Canvas.Left="96.657" Canvas.Top="182" Height="23" Name="damageHealBox" Width="58.883" />
+                    <Button Canvas.Left="28.886" Canvas.Top="88" Height="25" Name="plus1Dmg" Width="32.219" Click="plus1Dmg_Click">+1</Button>
+                    <Button Canvas.Left="64.438" Canvas.Top="88" Height="25" Name="plus3Dmg" Width="32.219" Click="plus3Dmg_Click">+3</Button>
+                    <Button Canvas.Left="98.879" Canvas.Top="88" Height="25" Name="plus5Dmg" Width="32.219" Click="plus5Dmg_Click">+5</Button>
+                    <Button Canvas.Left="134.431" Canvas.Top="88" Height="25" Name="plus10Dmg" Width="32.219" Click="plus10Dmg_Click">+10</Button>
+                    <Button Canvas.Left="28.886" Canvas.Top="119" Height="25" Name="minus1Dmg" Width="32.219" Click="minus1Dmg_Click">-1</Button>
+                    <Button Canvas.Left="64.438" Canvas.Top="119" Height="25" Name="minus2Dmg" Width="32.219" Click="minus2Dmg_Click">-3</Button>
+                    <Button Canvas.Left="98.879" Canvas.Top="119" Height="25" Name="minus5Dmg" Width="32.219" Click="minus5Dmg_Click">-5</Button>
+                    <Button Canvas.Left="134.431" Canvas.Top="119" Height="25" Name="minus10Dmg" Width="32.219" Click="minus10Dmg_Click">-10</Button>
+                    <TextBlock Canvas.Left="26.664" Canvas.Top="70" Height="21" Text="Quick Change Selected Hp" Name="textBlock2" Width="147.763" />
+                    <Button Canvas.Left="11.11" Canvas.Top="37" Height="24" Name="restoreSelectedHp" Width="175.538" Click="restoreSelectedHp_Click">Restore Selected HP</Button>
+                    <Button Canvas.Left="11.11" Canvas.Top="212" Height="24" Name="button1" Width="175.538" Click="button1_Click">Set Selected Initiative</Button>
+                    <TextBlock Canvas.Left="13.332" Canvas.Top="242" Height="20" Name="textBlock3" Text="Initiative:" Width="53.328" />
+                    <TextBox Canvas.Left="63.327" Canvas.Top="240" Height="23" Name="initiativeBox" Width="32.219" />
+                    <Button Canvas.Left="75.548" Canvas.Top="154" Height="24" Name="Gold" Width="55.55" Click="Gold_Click">Gold</Button>
+                    <Button Canvas.Left="135.542" Canvas.Top="154" Height="24" Name="XP" Width="55.55" Click="XP_Click">XP</Button>
+                    <Button Canvas.Left="11.11" Canvas.Top="7" Height="24" Name="editCombatant" Width="175.538" Click="editCombatant_Click">Edit Selected Combatant</Button>
+                </Canvas>
+            </GroupBox>
         </Canvas>
-        <GroupBox Canvas.Left="985" Canvas.Top="666" Header="Misc Functions" Height="133.32" Name="groupBox5" Width="171">
+        <GroupBox Canvas.Left="593" Canvas.Top="700" Header="Misc Functions" Height="133.32" Name="groupBox5" Width="171">
             <Canvas>
                 <Button Canvas.Left="6" Canvas.Top="6.04" Height="25" Name="button2" Width="147" Click="button2_Click">Consult Book Tables</Button>
                 <Button Canvas.Left="6" Canvas.Top="37" Height="24" Name="randomSpellbook" Width="147" Click="randomSpellbook_Click">Random Spellbook</Button>
@@ -273,7 +236,45 @@
                     <MenuItem Header="Sense Motive" Click="rollCheck_Click"/>
                     <MenuItem Header="Spot" Click="rollCheck_Click"/>
                 </MenuItem>
-            </MenuItem>>
+            </MenuItem>
+            <MenuItem Header="Tables">
+                <MenuItem Header="PHB General">
+                    <MenuItem Header="Actions" Tag="actions" Click="openTable_Click"/>
+                    <MenuItem Header="Aditional Spells" Tag="additional_spells" Click="openTable_Click"/>
+                    <MenuItem Header="Combat Modifiers" Tag="combat_modifiers" Click="openTable_Click"/>
+                    <MenuItem Header="Donning Armor" Tag="donning_armor" Click="openTable_Click"/>
+                    <MenuItem Header="Light Sources" Tag="light_sources" Click="openTable_Click"/>
+                    <MenuItem Header="Movement" Tag="movement" Click="openTable_Click"/>
+                    <MenuItem Header="Objects AC,HP" Tag="objects_breaking" Click="openTable_Click"/>
+                    <MenuItem Header="Size,Mod,Damage" Tag="size_modifiers" Click="openTable_Click" />
+                    <MenuItem Header="Track" Tag="track" Click="openTable_Click"/>
+                </MenuItem>
+                <MenuItem Header="PHB Skills">
+                    <MenuItem Header="Balance-Climb" Tag="balance-climb"  Click="openTable_Click" />
+                    <MenuItem Header="Concentration-Forgery" Tag="concentration-forgery" Click="openTable_Click"/>
+                    <MenuItem Header="Heal-Search" Tag="heal-search" Click="openTable_Click"/>
+                    <MenuItem Header="Spellcraft-Survival" Tag="spellcraft-survival" Click="openTable_Click"/>
+                    <MenuItem Header="Tumble-UseRope" Tag="tumble-use_rope" Click="openTable_Click"/>
+                </MenuItem>
+                <MenuItem Header="DMG">
+                    <MenuItem Header="Adventure Ideas A" Tag="adventure_ideas"  Click="openTable_Click"/>
+                    <MenuItem Header="Adventure Ideas B" Tag="adventure_ideas2"  Click="openTable_Click"/>
+                    <MenuItem Header="Diseases" Tag="diseases" Click="openTable_Click"/>
+                    <MenuItem Header="Door" Tag="doors" Click="openTable_Click"/>
+                    <MenuItem Header="Encounter CR" Tag="encounter_nd" Click="openTable_Click"/>
+                    <MenuItem Header="NPC Traits" Tag="npc_traits" Click="openTable_Click"/>
+                    <MenuItem Header="Poison" Tag="poisons" Click="openTable_Click"/>
+                    <MenuItem Header="Random Doors" Tag="random_doors" Click="openTable_Click"/>
+                    <MenuItem Header="Random Traps" Tag="random_traps" Click="openTable_Click"/>
+                    <MenuItem Header="Walls" Tag="walls" Click="openTable_Click"/>
+                    <MenuItem Header="XP Award" Tag="xp" Click="openTable_Click"/>
+                </MenuItem>
+                <MenuItem Header="Items">
+                    <MenuItem Header="Art" Tag="art" Click="openTable_Click"/>
+                    <MenuItem Header="Gems" Tag="gems" Click="openTable_Click" />
+                    <MenuItem Header="Potions" Tag="potions" Click="openTable_Click"/>
+                </MenuItem>
+            </MenuItem>
         </Menu>
     </Canvas>
 </Window>

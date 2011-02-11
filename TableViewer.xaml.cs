@@ -22,18 +22,28 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
-        public void SetImage(string directory, string imageName)
+        public bool SetImage(string directory, string imageName)
         {
             Uri uriSource = new Uri(directory + "\\tables\\" + imageName);
             BitmapImage source = new BitmapImage();
-            source.BeginInit();
-            source.UriSource = uriSource;
-            source.EndInit();
+            try
+            {
+                source.BeginInit();
+                source.UriSource = uriSource;
+                source.EndInit();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No table file called: " + uriSource.OriginalString);
+                return false;
+            }
+            
             this.Height = source.Height + 38;
             this.Width = source.Width + 17;
             image.Width = source.Width;
             image.Height = source.Height;
             image.Source = source;
+            return true;
         }
     }
 }
