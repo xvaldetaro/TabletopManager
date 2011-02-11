@@ -37,6 +37,12 @@
                 <TextBlock Background="{Binding Path=InnerColor}" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock15" Text="{Binding Path=XP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Width="45" />
             </StackPanel>
         </DataTemplate>
+        <DataTemplate x:Key="skillBoxTemplate">
+            <Grid>
+                <TextBlock FontFamily="Cambria" FontWeight="Bold" Height="20" Name="textBlock38" Text="{Binding Path=SkillName}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="149" />
+                <TextBox TextAlignment="Center" FontFamily="Cambria" FontWeight="Bold" Height="20" Margin="147,0,0,0" Name="textBlock1" Text="{Binding Path=SkillRank}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="33" />
+            </Grid>
+        </DataTemplate>
         <DataTemplate x:Key="itemBoxTemplate">
             <StackPanel Orientation="Horizontal" MouseRightButtonDown="StackPanel_MouseRightButtonDown">
                 <TextBlock Height="20" Name="charHeader" Text="{Binding Path=Name}" TextAlignment="Left" Width="138" />
@@ -108,31 +114,32 @@
             <TextBlock Background="Black" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="20" Name="textBlock15" Text="EXP" TextAlignment="Center" Width="45" />
         </StackPanel>
         <Border Canvas.Left="8" Canvas.Top="45" Height="7" Name="border2" Width="697" Background="Black" />
-        <GroupBox Canvas.Left="403" Canvas.Top="698" Header="Dice Rollers" Height="118" Name="groupBox3" Width="186">
+        <GroupBox Canvas.Left="403" Canvas.Top="698" Header="Dice Rollers" Height="118" Name="groupBox3" Width="293">
             <Canvas>
-                <Button Canvas.Left="21" Canvas.Top="8" Height="25" Name="d2" Width="25" Click="d2_Click">d2</Button>
-                <Button Canvas.Left="49" Canvas.Top="8" Height="25" Name="d6" Width="25" Click="d6_Click">d6</Button>
-                <Button Canvas.Left="21" Canvas.Top="36" Height="25" Name="d4" Width="25" Click="d4_Click">d4</Button>
-                <Button Canvas.Left="77" Canvas.Top="8" Height="25" Name="d10" Width="25" Click="d10_Click">d10</Button>
-                <Button Canvas.Left="49" Canvas.Top="36" Height="25" Name="d8" Width="25" Click="d8_Click">d8</Button>
-                <Button Canvas.Left="77" Canvas.Top="36" Height="25" Name="d12" Width="25" Click="d12_Click">d12</Button>
-                <Button Canvas.Left="105" Canvas.Top="8" Height="25" Name="d20" Width="25" Click="d20_Click">d20</Button>
-                <Button Canvas.Left="105" Canvas.Top="36" Height="25" Name="d100" Width="35" Click="d100_Click">d100</Button>
+                <Button Canvas.Left="21" Canvas.Top="8" Height="27" Name="d2" Width="40" Click="d2_Click">d2</Button>
+                <Button Canvas.Left="72" Canvas.Top="8" Height="27" Name="d6" Width="40" Click="d6_Click">d6</Button>
+                <Button Canvas.Left="21" Canvas.Top="36" Height="27" Name="d4" Width="40" Click="d4_Click">d4</Button>
+                <Button Canvas.Left="123" Canvas.Top="8" Height="27" Name="d10" Width="40" Click="d10_Click">d10</Button>
+                <Button Canvas.Left="72" Canvas.Top="36" Height="27" Name="d8" Width="40" Click="d8_Click">d8</Button>
+                <Button Canvas.Left="123" Canvas.Top="36" Height="27" Name="d12" Width="40" Click="d12_Click">d12</Button>
+                <Button Canvas.Left="175" Canvas.Top="8" Height="27" Name="d20" Width="40" Click="d20_Click">d20</Button>
+                <Button Canvas.Left="175" Canvas.Top="36" Height="27" Name="d100" Width="40" Click="d100_Click">d100</Button>
                 <TextBlock Canvas.Left="24" Canvas.Top="66" FontSize="14" Foreground="Black" Height="21" Name="textBlock23" Text="Result" Width="61.105" />
                 <TextBox Canvas.Left="77" Canvas.Top="65" Height="24
                          " Name="resultBox" Width="54.439">0</TextBox>
             </Canvas>
         </GroupBox>
-        <GroupBox Canvas.Left="403" Canvas.Top="538" Header="Changes on Combat Table" Height="160" Name="groupBox7" Width="186">
+        <GroupBox Canvas.Left="403" Canvas.Top="538" Header="Changes on Combat Table" Height="160" Name="groupBox7" Width="221">
             <Canvas>
-                <Button Canvas.Left="9.999" Canvas.Top="10.04" Command="New" Height="24" Name="addNewCombatant" Width="156">Add New Combatant</Button>
-                <Button Canvas.Left="9.999" Canvas.Top="39.04" Command="Delete" Height="24.04" Name="removeSelectedCombatant" Width="156" Content="Remove Selected"></Button>
-                <Button Canvas.Left="10" Canvas.Top="108" Height="24" Click="MoveCombatantUp" Name="moveCombatantUp" Width="77" Content="Move Up"></Button>
-                <Button Canvas.Left="93" Canvas.Top="108" Height="24" Click="MoveCombatantDown" Name="moveCombatantDown" Width="73" Content="Move Down"></Button>
-                <Button Canvas.Left="9.999" Canvas.Top="69" Height="24" Name="cloneSelectedCombatant" Width="157" Click="cloneSelectedCombatant_Click" Content="Clone Selected"></Button>
+                <Button Canvas.Left="9.999" Canvas.Top="10.04" Command="New" Height="24" Name="addNewCombatant" Width="180">Add New Combatant</Button>
+                <Button Canvas.Left="9.999" Canvas.Top="39.04" Command="Delete" Height="24.04" Name="removeSelectedCombatant" Width="180" Content="Remove Selected"></Button>
+                <Button Canvas.Left="10" Canvas.Top="107" Height="24" Click="MoveCombatantUp" Name="moveCombatantUp" Width="87" Content="Move Up"></Button>
+                <Button Canvas.Left="102" Canvas.Top="107" Height="24" Click="MoveCombatantDown" Name="moveCombatantDown" Width="85" Content="Move Down"></Button>
+                <Button Canvas.Left="9.999" Canvas.Top="69" Height="24" Name="cloneSelectedCombatant" Width="180" Click="cloneSelectedCombatant_Click" Content="Clone Selected"></Button>
             </Canvas>
         </GroupBox>
-        <Canvas Canvas.Left="713" Canvas.Top="27" Height="513" Name="quickSheet" Width="425">
+        <Canvas Canvas.Left="713" Canvas.Top="27" Height="789" Name="quickSheet" Width="440">
+            <Border Canvas.Left="-10" Canvas.Top="-4" Height="794" Name="border3" Width="455" BorderBrush="Black" BorderThickness="3" />
             <TextBlock Canvas.Left="11" Canvas.Top="35" FontFamily="Cambria" FontWeight="Bold" Height="20" Name="textBlock16" Text="CHARACTER NAME" Width="104" />
             <TextBox Canvas.Left="10" Canvas.Top="10" FontSize="14" Height="24" HorizontalContentAlignment="Center" Name="textBox1" Text="{Binding Path=CName}" TextAlignment="Left" Width="281" />
             <TextBlock Background="Black" Canvas.Left="17" Canvas.Top="61" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock34" Text="HP" TextAlignment="Center" Width="56" />
@@ -156,16 +163,21 @@
             <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="278" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock32" Text="WILL" TextAlignment="Center" Width="97" />
             <TextBox Canvas.Left="65" Canvas.Top="308" Height="24" Name="textBlock20" Text="{Binding Path=AB}" TextAlignment="Center" Width="33" />
             <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="308" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock33" Text="BAB" TextAlignment="Center" Width="49" />
-            <TextBox Canvas.Left="13" Canvas.Top="372" Height="98" Name="textBox12" Text="{Binding Path=Notes}" Width="399" />
-            <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="342" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock21" Text="NOTES" TextAlignment="Center" Width="69" />
-            <TextBlock Background="Black" Canvas.Left="166" Canvas.Top="64" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock22" Text="ITEMS" TextAlignment="Center" Width="149" />
-            <ListBox Canvas.Left="166" Canvas.Top="94" Height="239" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource itemBoxTemplate}" ItemsSource="{Binding Path=Items}" Name="itemListBox" Width="246" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="166" Canvas.Top="339" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="newItemButton" Padding="0" VerticalContentAlignment="Center" Width="87" Click="newItemButton_Click" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="270" Canvas.Top="339" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="removeItemButton" Padding="0" VerticalContentAlignment="Center" Width="87" Click="removeItemButton_Click" />
-            <TextBlock Background="Black" Canvas.Left="321" Canvas.Top="64" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock24" Text="W" TextAlignment="Center" Width="29" />
-            <TextBlock Background="Black" Canvas.Left="356" Canvas.Top="64" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock25" Text="Gold" TextAlignment="Center" Width="56" />
+            <TextBox BorderBrush="Black" Canvas.Left="13" Canvas.Top="643" Height="130" Name="textBox12" Text="{Binding Path=Notes}" Width="193" />
+            <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="612" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock21" Text="NOTES" TextAlignment="Center" Width="69" />
+            <TextBlock Background="Black" Canvas.Left="182" Canvas.Top="48" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock22" Text="ITEMS" TextAlignment="Center" Width="149" />
+            <ListBox Canvas.Left="182" Canvas.Top="78" Height="213" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource itemBoxTemplate}" ItemsSource="{Binding Path=Items}" Name="itemListBox" Width="246" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="183" Canvas.Top="298" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="newItemButton" Padding="0" VerticalContentAlignment="Center" Width="122" Click="newItemButton_Click" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="311" Canvas.Top="298" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="removeItemButton" Padding="0" VerticalContentAlignment="Center" Width="118" Click="removeItemButton_Click" />
+            <TextBlock Background="Black" Canvas.Left="337" Canvas.Top="48" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock24" Text="W" TextAlignment="Center" Width="29" />
+            <TextBlock Background="Black" Canvas.Left="372" Canvas.Top="48" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock25" Text="Gold" TextAlignment="Center" Width="56" />
             <CheckBox Canvas.Left="321" Canvas.Top="10" Content="NPC" Height="22" IsChecked="{Binding Path=IsNPC}" Name="isNPC" Width="74" />
-            <Button Canvas.Left="122" Canvas.Top="482" Height="24" Name="editCombatant" Width="175.538" Click="editCombatant_Click" Content="Switch to Full Sheet"></Button>
+            <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="382" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock4" Text="FEATS" TextAlignment="Center" Width="191" />
+            <ListBox Canvas.Left="14" Canvas.Top="412" Height="148" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Name="listBox2" Width="192" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="14" Canvas.Top="567" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="117" Canvas.Top="567" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button3" Padding="0" VerticalContentAlignment="Center" Width="87" />
+            <TextBlock Background="Black" Canvas.Left="225" Canvas.Top="335" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock37" Text="SKILLS" TextAlignment="Center" Width="209" />
+            <ListBox Canvas.Left="225" Canvas.Top="365" Height="413" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource skillBoxTemplate}" ItemsSource="{Binding Path=Skills}" Name="listBox3" Width="209" />
         </Canvas>
         <Menu Canvas.Left="0" Canvas.Top="1" Height="19" Name="titleMenu" Width="1168" Background="#FFF5F2F2">
             <MenuItem Header="_File">
@@ -241,6 +253,7 @@
                 <MenuItem Header="with Gold" Click="GiveGold_Click"/>
                 <MenuItem Header="with Exp" Click="GiveXP_Click" />
             </MenuItem>
+            <MenuItem Header="About" />
         </Menu>
         <GroupBox Canvas.Left="187" Canvas.Top="538" Header="Changes on Selected Character" Height="268" Name="groupBox6" Width="207.757">
             <Canvas>

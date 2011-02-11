@@ -63,7 +63,7 @@
         <ListBox IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Canvas.Left="644" Canvas.Top="89" Height="207" Name="listBox1" Width="192" />
         <ListBox ItemTemplate="{StaticResource itemBoxTemplate}" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Items}" Canvas.Left="644" Canvas.Top="360" Height="239" Name="listBox2" Width="246" />
         <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="644" Canvas.Top="301" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" Click="button2_Click">NEW</Button>
-        <ListBox ItemTemplate="{StaticResource listBoxTemplate}" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Skills}" Canvas.Left="419" Canvas.Top="88" Height="540" Name="listBox3" Width="209" />
+        <ListBox ItemTemplate="{StaticResource listBoxTemplate}" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Skills}" Canvas.Left="419" Canvas.Top="88" Height="445" Name="listBox3" Width="209" />
         <TextBox Text="{Binding Path=Notes}" Canvas.Left="12" Canvas.Top="466" Height="162" Name="textBox12" Width="379" />
         <TextBlock Background="Black" Canvas.Left="12" Canvas.Top="436" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock9" Text="NOTES" TextAlignment="Center" Width="379" />
         <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="748" Canvas.Top="301" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button1" Padding="0" VerticalContentAlignment="Center" Width="87" Click="button1_Click">REMOVE</Button>
