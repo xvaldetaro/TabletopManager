@@ -139,7 +139,22 @@
             </Canvas>
         </GroupBox>
         <Canvas Canvas.Left="713" Canvas.Top="27" Height="789" Name="quickSheet" Width="440">
-            <Border Canvas.Left="-10" Canvas.Top="-4" Height="794" Name="border3" Width="455" BorderBrush="Black" BorderThickness="3" />
+            <Border Canvas.Left="-10" Canvas.Top="-4" Height="794" Name="border3" Width="455" BorderBrush="Black" BorderThickness="3">
+                <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBox Canvas.Left="18" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox6" Text="{Binding Path=AbilitySTR}" TextAlignment="Center" Width="31" />
+                    <TextBox Canvas.Left="51" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox7" Text="{Binding Path=AbilityDEX}" TextAlignment="Center" Width="31" />
+                    <TextBox Canvas.Left="84" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox8" Text="{Binding Path=AbilityCON}" TextAlignment="Center" Width="31" />
+                    <TextBox Canvas.Left="118" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox13" Text="{Binding Path=AbilityINT}" TextAlignment="Center" Width="31" />
+                    <TextBox Canvas.Left="151" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox14" Text="{Binding Path=AbilityWIS}" TextAlignment="Center" Width="31" />
+                    <TextBox Canvas.Left="184" Canvas.Top="377" Height="24" HorizontalContentAlignment="Center" Name="textBox15" Text="{Binding Path=AbilityCHA}" TextAlignment="Center" Width="31" />
+                    <TextBlock Background="Black" Canvas.Left="18" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock5" Text="STR" TextAlignment="Center" Width="31" />
+                    <TextBlock Background="Black" Canvas.Left="51" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock28" Text="DEX" TextAlignment="Center" Width="29" />
+                    <TextBlock Background="Black" Canvas.Left="84" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock38" Text="CON" TextAlignment="Center" Width="31" />
+                    <TextBlock Background="Black" Canvas.Left="118" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock39" Text="INT" TextAlignment="Center" Width="31" />
+                    <TextBlock Background="Black" Canvas.Left="151" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock40" Text="WIS" TextAlignment="Center" Width="31" />
+                    <TextBlock Background="Black" Canvas.Left="184" Canvas.Top="356" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Foreground="White" Height="22" Name="textBlock41" Text="CHA" TextAlignment="Center" Width="31" />
+                </Canvas>
+            </Border>
             <TextBlock Canvas.Left="11" Canvas.Top="35" FontFamily="Cambria" FontWeight="Bold" Height="20" Name="textBlock16" Text="CHARACTER NAME" Width="104" />
             <TextBox Canvas.Left="10" Canvas.Top="10" FontSize="14" Height="24" HorizontalContentAlignment="Center" Name="textBox1" Text="{Binding Path=CName}" TextAlignment="Left" Width="281" />
             <TextBlock Background="Black" Canvas.Left="17" Canvas.Top="61" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock34" Text="HP" TextAlignment="Center" Width="56" />
@@ -151,7 +166,7 @@
             <TextBlock Canvas.Left="114" Canvas.Top="65" Height="23" Name="textBlock17" Text="/" />
             <TextBox Canvas.Left="122" Canvas.Top="63" Height="24" HorizontalContentAlignment="Center" Name="textBox2" Text="{Binding Path=MaxHP}" TextAlignment="Center" Width="31" />
             <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="148" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock18" Text="XP" TextAlignment="Center" Width="38" />
-            <TextBox Canvas.Left="57" Canvas.Top="148" Height="24" Name="textBox3" Text="{Binding Path=XP}" TextAlignment="Center" Width="76" />
+            <TextBox Canvas.Left="57" Canvas.Top="148" Height="24" Name="textBox3" Text="{Binding Path=XP}" TextAlignment="Center" Width="76" GotFocus="textBox3_GotFocus" />
             <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="177" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock19" Text="GOLD" TextAlignment="Center" Width="55" />
             <TextBox Canvas.Left="77" Canvas.Top="177" Height="24" Name="textBox4" Text="{Binding Path=Gold}" TextAlignment="Center" Width="76" />
             <TextBox Canvas.Left="116" Canvas.Top="226" FontSize="11" FontWeight="Normal" Height="24" HorizontalContentAlignment="Center" Name="textBox5" Text="{Binding Path=Fort}" TextAlignment="Center" Width="32" />
@@ -163,8 +178,8 @@
             <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="278" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock32" Text="WILL" TextAlignment="Center" Width="97" />
             <TextBox Canvas.Left="65" Canvas.Top="308" Height="24" Name="textBlock20" Text="{Binding Path=AB}" TextAlignment="Center" Width="33" />
             <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="308" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock33" Text="BAB" TextAlignment="Center" Width="49" />
-            <TextBox BorderBrush="Black" Canvas.Left="13" Canvas.Top="643" Height="130" Name="textBox12" Text="{Binding Path=Notes}" Width="193" />
-            <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="612" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock21" Text="NOTES" TextAlignment="Center" Width="69" />
+            <TextBox BorderBrush="Black" Canvas.Left="13" Canvas.Top="667" Height="106" Name="textBox12" Text="{Binding Path=Notes}" Width="193" />
+            <TextBlock Background="Black" Canvas.Left="13" Canvas.Top="639" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock21" Text="NOTES" TextAlignment="Center" Width="69" />
             <TextBlock Background="Black" Canvas.Left="182" Canvas.Top="48" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock22" Text="ITEMS" TextAlignment="Center" Width="149" />
             <ListBox Canvas.Left="182" Canvas.Top="78" Height="213" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource itemBoxTemplate}" ItemsSource="{Binding Path=Items}" Name="itemListBox" Width="246" />
             <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="183" Canvas.Top="298" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="newItemButton" Padding="0" VerticalContentAlignment="Center" Width="122" Click="newItemButton_Click" />
@@ -172,10 +187,10 @@
             <TextBlock Background="Black" Canvas.Left="337" Canvas.Top="48" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock24" Text="W" TextAlignment="Center" Width="29" />
             <TextBlock Background="Black" Canvas.Left="372" Canvas.Top="48" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock25" Text="Gold" TextAlignment="Center" Width="56" />
             <CheckBox Canvas.Left="321" Canvas.Top="10" Content="NPC" Height="22" IsChecked="{Binding Path=IsNPC}" Name="isNPC" Width="74" />
-            <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="382" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock4" Text="FEATS" TextAlignment="Center" Width="191" />
-            <ListBox Canvas.Left="14" Canvas.Top="412" Height="148" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Name="listBox2" Width="192" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="14" Canvas.Top="567" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="117" Canvas.Top="567" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button3" Padding="0" VerticalContentAlignment="Center" Width="87" />
+            <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="420" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock4" Text="FEATS" TextAlignment="Center" Width="191" />
+            <ListBox Canvas.Left="14" Canvas.Top="450" Height="148" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Name="listBox2" Width="192" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="14" Canvas.Top="603" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="117" Canvas.Top="603" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button3" Padding="0" VerticalContentAlignment="Center" Width="87" />
             <TextBlock Background="Black" Canvas.Left="225" Canvas.Top="335" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock37" Text="SKILLS" TextAlignment="Center" Width="209" />
             <ListBox Canvas.Left="225" Canvas.Top="365" Height="413" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource skillBoxTemplate}" ItemsSource="{Binding Path=Skills}" Name="listBox3" Width="209" />
         </Canvas>
