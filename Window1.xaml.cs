@@ -600,7 +600,7 @@ namespace WpfApplication1
                 }
             }
             Window2 inputGetter = new Window2("How much xp will be Awarded?");
-            inputGetter.Show();
+            inputGetter.ShowDialog();
             float xpShare = App.getFloatFromString(inputGetter.InputValue) / (float)numPCs;
             for (int i = 0; i < listi.Count; i++)
             {

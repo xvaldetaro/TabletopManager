@@ -522,6 +522,8 @@ namespace WpfApplication1
         public Combatant(string cName, string pName, float hp, float initiative, float aC, float aB, float maxHP,
                             float initMod, float fort, float refl, float will, float listen, float sense, float spot, bool isNPC)
         {
+
+            enableCompleteCharacter();
             this.cName = cName;
             this.pName = pName;
             this.hP = hp;
@@ -540,7 +542,6 @@ namespace WpfApplication1
             this.xP = 0.0f;
             this.Gold = 0.0f;
             this.turn = false;
-            enableCompleteCharacter();
         }
         public Combatant(string cName, string pName, string hp, string initiative, string aC, string aB, string maxHP,
                             string initMod, string fort, string refl, string will, string listen, string sense, string spot, bool isNPC)
