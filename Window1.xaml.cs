@@ -740,6 +740,25 @@ namespace WpfApplication1
         {
             textBox3.SelectAll();
         }
+
+        private void newFeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewListboxItem itemAdder = new NewListboxItem();
+            itemAdder.ShowDialog();
+            if (itemAdder.gotItem)
+            {
+                Combatant combatant = (Combatant)quickSheet.DataContext;
+                combatant.Feats.Add(itemAdder.item);
+            }
+        }
+        private void removeFeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            Combatant combatant = (Combatant)quickSheet.DataContext;
+            if (featListBox.SelectedIndex == -1)
+                MessageBox.Show("No selected item");
+            else
+                combatant.removeFeat(featListBox.SelectedIndex);
+        }
     }
     
 

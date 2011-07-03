@@ -715,6 +715,14 @@ namespace WpfApplication1
         {
             removeItem(items[index]);
         }
+        public void removeFeat(string feat)
+        {
+            feats.Remove(feat);
+        }
+        public void removeFeat(int index)
+        {
+            feats.Remove(feats[index]);
+        }
         #endregion
     }
 

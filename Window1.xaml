@@ -188,11 +188,11 @@
             <TextBlock Background="Black" Canvas.Left="372" Canvas.Top="48" FontFamily="Calibri" FontSize="14" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock25" Text="Gold" TextAlignment="Center" Width="56" />
             <CheckBox Canvas.Left="321" Canvas.Top="10" Content="NPC" Height="22" IsChecked="{Binding Path=IsNPC}" Name="isNPC" Width="74" />
             <TextBlock Background="Black" Canvas.Left="14" Canvas.Top="420" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock4" Text="FEATS" TextAlignment="Center" Width="191" />
-            <ListBox Canvas.Left="14" Canvas.Top="450" Height="148" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Name="listBox2" Width="192" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="14" Canvas.Top="603" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button2" Padding="0" VerticalContentAlignment="Center" Width="87" />
-            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="117" Canvas.Top="603" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="button3" Padding="0" VerticalContentAlignment="Center" Width="87" />
+            <ListBox Canvas.Left="14" Canvas.Top="450" Height="148" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Path=Feats}" Name="featListBox" Width="192" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="14" Canvas.Top="603" Content="NEW" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="newFeatButton" Padding="0" VerticalContentAlignment="Center" Width="87" Click="newFeatButton_Click" />
+            <Button Background="AntiqueWhite" BorderBrush="Black" Canvas.Left="117" Canvas.Top="603" Content="REMOVE" FontFamily="CALIBRI" FontSize="16" FontWeight="Bold" Height="23" Name="removeFeatButton" Padding="0" VerticalContentAlignment="Center" Width="87" Click="removeFeatButton_Click" />
             <TextBlock Background="Black" Canvas.Left="225" Canvas.Top="335" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Foreground="White" Height="24" Name="textBlock37" Text="SKILLS" TextAlignment="Center" Width="209" />
-            <ListBox Canvas.Left="225" Canvas.Top="365" Height="413" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource skillBoxTemplate}" ItemsSource="{Binding Path=Skills}" Name="listBox3" Width="209" />
+            <ListBox Canvas.Left="225" Canvas.Top="365" Height="413" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource skillBoxTemplate}" ItemsSource="{Binding Path=Skills}" Name="skillListBox" Width="209" />
         </Canvas>
         <Menu Canvas.Left="0" Canvas.Top="1" Height="19" Name="titleMenu" Width="1168" Background="#FFF5F2F2">
             <MenuItem Header="_File">
